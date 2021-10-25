@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/border_darkgray_bottom.xml" value="0.184375" />
+        <entry key="app/src/main/res/drawable/border_darkgray_r30.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/drawable/border_gray_top_and_bottom.xml" value="0.11145833333333334" />
+        <entry key="app/src/main/res/drawable/border_pointcolor_bottom.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/border_pointcolor_bottom_top.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/btn_selector_bg_pointcolor_gray.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/drawable/btn_selector_bg_pointcolor_white.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/drawable/btn_selector_bg_white_pointcolor.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/drawable/btn_selector_bg_yellow2_gray.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/drawable/progressbar_pointcolor_horizon.xml" value="0.184375" />
+        <entry key="app/src/main/res/drawable/tab_selector_bg.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/drawable/tab_selector_text.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/layout/activity_confirmcancel_dialog.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/activity_history_write.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_intro.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1328125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13385416666666666" />
+        <entry key="app/src/main/res/layout/activity_transfer.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/activity_user_write.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_write.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/common_toast.xml" value="0.1328125" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.28055555555555556" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_statistic.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_fragmentdiary_card.xml" value="0.1816123188405797" />
+        <entry key="app/src/main/res/layout/item_fragmenthistory.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/item_fragmenthistory_cardhistory.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/item_tab_history_text.xml" value="0.1328125" />
+        <entry key="app/src/main/res/layout/item_tab_text.xml" value="0.1328125" />
+        <entry key="app/src/main/res/layout/item_transfer_slip.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/toolbar_main.xml" value="0.1328125" />
+        <entry key="app/src/main/res/layout/toolbar_text_back_btn.xml" value="0.159375" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

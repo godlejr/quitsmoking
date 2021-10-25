@@ -1,0 +1,49 @@
+package dongjoo.second.quitsmoking.ui.base.view;
+
+import android.content.Context;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import dongjoo.second.quitsmoking.common.entity.History;
+import dongjoo.second.quitsmoking.common.entity.User;
+
+/**
+ * BaseView
+ *
+ * @author 김동주
+ * @since 2021.10.07
+ */
+public interface BaseView {
+
+    void showMessage(String message);
+
+    void setToolbarLayout();
+
+    void setActivityFinish();
+
+    void showToolbarTitle(String message);
+
+    void removeSharedPreferHistory(int index);
+
+    void showProgressDialog();
+
+    void goneProgressDialog();
+
+    void setSharedPreferUser(User user);
+
+    User getSharedPreferUser();
+
+    void removeSharedPreferUser();
+
+    void setSharedPreferHistory(History history);
+
+    void removeAllSharedPreferHistory(List<History> removeHistories);
+
+    ArrayList<History> getSharedPreferHistories();
+
+
+    Context getContext();
+
+
+}
