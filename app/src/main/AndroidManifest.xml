@@ -16,6 +16,12 @@
         android:supportsRtl="true"
 
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9788689455127875~1070463615"/>
+
+
         <activity android:name=".ui.intro.activity.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

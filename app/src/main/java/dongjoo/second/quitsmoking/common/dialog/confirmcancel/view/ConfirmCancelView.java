@@ -9,5 +9,7 @@ public interface ConfirmCancelView extends BaseView {
     void navigateToBackWithResultOk();
 
 
+    void showAdFront();
+
     void navigateToBack();
 }

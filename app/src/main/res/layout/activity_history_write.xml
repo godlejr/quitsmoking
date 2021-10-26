@@ -66,7 +66,7 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="left|center_vertical"
                         android:paddingRight="0dp"
-                        android:text="금연 체크"
+                        android:text="오늘 금연 성공했나요?"
                         android:textColor="@color/darkGray" />
 
                     <RadioGroup
@@ -169,6 +169,17 @@
 
 
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="bottom|center_horizontal"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_banner_dev">
+
+    </com.google.android.gms.ads.AdView>
 
     <Button
         android:id="@+id/btn_historywrite_finish"

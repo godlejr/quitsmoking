@@ -1,6 +1,7 @@
 package dongjoo.second.quitsmoking.ui.main.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import com.google.android.material.tabs.TabLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import dongjoo.second.quitsmoking.R;
+import dongjoo.second.quitsmoking.common.dialog.confirmcancel.activity.ConfirmCancelActivity;
+import dongjoo.second.quitsmoking.common.dto.ConfirmCancelDialogDto;
+import dongjoo.second.quitsmoking.common.flag.ActivityRequestResultFlag;
 import dongjoo.second.quitsmoking.ui.base.activity.BaseActivity;
 import dongjoo.second.quitsmoking.ui.history.fragment.HistoryFragment;
 import dongjoo.second.quitsmoking.ui.home.fragment.HomeFragment;
@@ -21,6 +25,7 @@ import dongjoo.second.quitsmoking.ui.main.adapter.MainTabAdapter;
 import dongjoo.second.quitsmoking.ui.main.presenter.MainPresenter;
 import dongjoo.second.quitsmoking.ui.main.presenter.MainPresenterImpl;
 import dongjoo.second.quitsmoking.ui.main.view.MainView;
+import dongjoo.second.quitsmoking.ui.setting.fragment.SettingFragment;
 
 public class MainActivity extends BaseActivity implements MainView, TabLayout.OnTabSelectedListener {
 
@@ -44,6 +49,7 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
     @BindView(R.id.in_mainactivity_toolbar)
     View mToolbar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +60,7 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
         this.mPresenter.onAttach(this);
 
         init();
+
     }
 
     protected void init() {
@@ -126,8 +133,8 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
         mTabAdapter = new MainTabAdapter(getSupportFragmentManager(), this);
 
         mTabAdapter.addFragment(new HomeFragment());
-        mTabAdapter.addFragment(new HistoryFragment()); //바꿔야함
-        mTabAdapter.addFragment(new HomeFragment());
+        mTabAdapter.addFragment(new HistoryFragment());
+        mTabAdapter.addFragment(new SettingFragment());
 
         mViewPager.setAdapter(mTabAdapter);
 
@@ -187,23 +194,55 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        switch (requestCode) {
-//            case ActivityRequestResultFlag.CONFIRM_CANCEL_DIALOG_LOGOUT_REQUEST:
-//                switch (resultCode) {
-//                    case ActivityRequestResultFlag.RESULT_OK:
-//                        this.mPresenter.onActivityResultForLogoutResultOk();
-//                        break;
-//
-//                }
-//                break;
-//        }
         super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case ActivityRequestResultFlag.CONFIRM_CANCEL_DIALOG_APP_DESTROY_REQUEST:
+                switch (resultCode) {
+                    case ActivityRequestResultFlag.RESULT_OK:
+                        this.mPresenter.onActivityResultForAppDestroyOk();
+                        break;
+                }
+                break;
+        }
+    }
+
+
+    @Override
+    public void destroyApp() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            finishAndRemoveTask();
+        } else {
+            finish();
+        }
+
+        System.exit(0);
     }
 
     @Override
     protected void onResume() {
-        super.onResume();
-        mPresenter.onResume();
 
+        if (!this.isDestroyed()) {
+            super.onResume();
+            mPresenter.onResume();
+        }
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.mPresenter.onBackPressed();
+    }
+
+    @Override
+    public void navigateToConfirmCancelDialogActivity(ConfirmCancelDialogDto confirmCancelDialogDto, int flag, int requestCode) {
+        Intent intent = new Intent(this.mContext, ConfirmCancelActivity.class);
+        intent.putExtra("flag", flag);
+        intent.putExtra("confirmCancelDialogDto", confirmCancelDialogDto);
+        startActivityForResult(intent, requestCode);
     }
 }

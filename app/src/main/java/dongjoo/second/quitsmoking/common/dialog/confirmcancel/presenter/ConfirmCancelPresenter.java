@@ -11,4 +11,6 @@ public interface ConfirmCancelPresenter<V extends ConfirmCancelView> extends Bas
     void onClickConfirm();
 
     void onClickCancel();
+
+    void onAdDismissedFullScreenContent();
 }

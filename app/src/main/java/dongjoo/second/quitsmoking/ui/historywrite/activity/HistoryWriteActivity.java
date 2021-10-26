@@ -11,6 +11,12 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import butterknife.BindColor;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -54,6 +60,9 @@ public class HistoryWriteActivity extends BaseActivity implements HistoryWriteVi
     @BindView(R.id.in_historywrite_toolbar)
     View mToolbar;
 
+    @BindView(R.id.adView)
+    AdView mAdView;
+
     private IncludedToolbarLayout mIncludedToolbarLayout;
 
 
@@ -67,6 +76,15 @@ public class HistoryWriteActivity extends BaseActivity implements HistoryWriteVi
         this.mPresenter.onAttach(this);
 
         init();
+
+        MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        this.mAdView.loadAd(adRequest);
     }
 
 

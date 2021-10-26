@@ -18,6 +18,7 @@ public class ConfirmCancelPresenterImpl<V extends ConfirmCancelView> extends Bas
 
     @Override
     public void init(ConfirmCancelDialogDto confirmCancelDialogDto, int flag) {
+        getBaseView().showProgressDialog();
 
         this.confirmCancelDialogDto = confirmCancelDialogDto;
         this.flag = flag;
@@ -26,6 +27,11 @@ public class ConfirmCancelPresenterImpl<V extends ConfirmCancelView> extends Bas
             getBaseView().setTitleContent(DialogFlag.HISTORY_DELETE_CONFIRM_TITLE);
         }
 
+        if (this.flag == DialogFlag.APP_DESTROY_CONFIRM) {
+            getBaseView().setTitleContent(DialogFlag.APP_DESTROY_CONFIRM_TITLE);
+        }
+
+        getBaseView().goneProgressDialog();
     }
 
     @Override
@@ -38,8 +44,15 @@ public class ConfirmCancelPresenterImpl<V extends ConfirmCancelView> extends Bas
             getBaseView().removeAllSharedPreferHistory(histories);
             getBaseView().goneProgressDialog();
 
-            getBaseView().navigateToBackWithResultOk();
+            getBaseView().showAdFront();
         }
+
+        if (flag == DialogFlag.APP_DESTROY_CONFIRM) {
+            getBaseView().goneProgressDialog();
+            getBaseView().showAdFront();
+        }
+
+
 
         getBaseView().goneProgressDialog();
     }
@@ -47,6 +60,12 @@ public class ConfirmCancelPresenterImpl<V extends ConfirmCancelView> extends Bas
     @Override
     public void onClickCancel() {
         getBaseView().setActivityFinish();
+    }
+
+
+    @Override
+    public void onAdDismissedFullScreenContent(){
+        getBaseView().navigateToBackWithResultOk();
     }
 
 }

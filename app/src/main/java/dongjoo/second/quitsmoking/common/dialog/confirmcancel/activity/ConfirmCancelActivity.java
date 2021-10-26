@@ -2,9 +2,24 @@ package dongjoo.second.quitsmoking.common.dialog.confirmcancel.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -23,6 +38,14 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
     @BindView(R.id.tv_confirmcanceldialog_title)
     TextView mTitleTv;
 
+    @BindView(R.id.adView)
+    AdView mAdView;
+
+    @BindString(R.string.ad_front_dev)
+    String mAdFrontId;
+
+    private InterstitialAd mInterstitialAd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +58,17 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
         this.mPresenter = new ConfirmCancelPresenterImpl();
         this.mPresenter.onAttach(this);
         init();
+
+        MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        //배너 광고
+        AdRequest adRequest_banner = new AdRequest.Builder().build();
+        this.mAdView.loadAd(adRequest_banner);
+
+
     }
 
     @Override
@@ -43,6 +77,43 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
         int flag = getIntent().getIntExtra("flag", 0);
 
         this.mPresenter.init(confirmCancelDialogDto, flag);
+
+
+        //전면 광고
+        AdRequest adRequest_front = new AdRequest.Builder().build();
+
+        mInterstitialAd.load(this,mAdFrontId, adRequest_front,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        mInterstitialAd = interstitialAd;
+
+                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                mPresenter.onAdDismissedFullScreenContent();
+                                Log.d("TAG", "The ad was dismissed.");
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                Log.d("TAG", "The ad failed to show.");
+                            }
+
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                mInterstitialAd = null;
+                                Log.d("TAG", "The ad was shown.");
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        mInterstitialAd = null;
+                    }
+                });
     }
 
     @Override
@@ -63,8 +134,21 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
     @Override
     public void navigateToBackWithResultOk() {
         Intent intent = getIntent();
-        setResult(ActivityRequestResultFlag.RESULT_OK, intent);
+        if (getParent() == null) {
+            setResult(ActivityRequestResultFlag.RESULT_OK, intent);
+        } else {
+            getParent().setResult(ActivityRequestResultFlag.RESULT_OK, intent);
+        }
         finish();
+    }
+
+    @Override
+    public void showAdFront(){
+        if (mInterstitialAd != null) {
+            mInterstitialAd.show(ConfirmCancelActivity.this);
+        } else {
+            this.mPresenter.onAdDismissedFullScreenContent();
+        }
     }
 
     @Override

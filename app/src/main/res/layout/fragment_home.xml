@@ -1,792 +1,805 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginBottom="50dp"
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:padding="8dp"
-                android:src="@drawable/main_speaker"
-                app:tint="@color/red" />
-
-            <TextView
-                android:id="@+id/tv_homefragment_notice"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text=""
-                android:textColor="@color/pointColor"
-                android:textSize="17sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="310dp"
-            android:background="@color/pointColor"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp">
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/main_speaker"
+                    app:tint="@color/red" />
 
                 <TextView
-                    android:id="@+id/tv_homefragment_title"
+                    android:id="@+id/tv_homefragment_notice"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="나의 금연 상태"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_homefragment_userempty"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal"
-                android:paddingLeft="40dp"
-                android:gravity="center"
-
-                android:paddingRight="40dp"
-                android:visibility="gone">
-
-                <!-- 이미지로 change needs -->
-                <TextView
-                    android:id="@+id/tv_homefragment_userwrite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:text="금연상태 작성하기"
-                    android:background="@drawable/btn_selector_bg_pointcolor_white"
+                    android:text=""
                     android:textColor="@color/pointColor"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="17sp" />
+
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_homefragment_user"
                 android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:background="@color/pointColor"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_homefragment_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="나의 금연 상태"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_homefragment_userempty"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="40dp"
+
+                    android:paddingRight="40dp"
+                    android:visibility="gone">
+
+                    <!-- 이미지로 change needs -->
+                    <TextView
+                        android:id="@+id/tv_homefragment_userwrite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/btn_selector_bg_pointcolor_white"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="금연상태 작성하기"
+                        android:textColor="@color/pointColor"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_homefragment_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp">
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_startdays"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="금연 시작 날짜"
+
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_startdays_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="2020년 11월 11일"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp">
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_quitperiod"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="금연 기간"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_quitperiod_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="1시간 쨰"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp">
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_life"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="연장된 수명"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_life_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="2일"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp">
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="아낀 돈"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_homefragment_money_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="20000원"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_homefragment_healthtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="나의 건강 상태"
+                        android:textColor="@color/defaultTextColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_homefragment_health"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="40dp"
                     android:paddingRight="40dp">
 
-                    <TextView
-                        android:id="@+id/tv_homefragment_startdays"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:text="금연 시작 날짜"
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
-                        android:textColor="@color/gray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
 
-                    <TextView
-                        android:id="@+id/tv_homefragment_startdays_val"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:text="2020년 11월 11일"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                            android:maxLines="2"
+                            android:text="금연 20분 - 혈압 맥박 손발 체온 정상"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp">
 
-                    <TextView
-                        android:id="@+id/tv_homefragment_quitperiod"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:text="금연 기간"
-                        android:textColor="@color/gray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/tv_homefragment_quitperiod_val"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:text="1시간 쨰"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_1"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp">
+                            <TextView
+                                android:id="@+id/tv_homefragment_val1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tv_homefragment_life"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:text="연장된 수명"
-                        android:textColor="@color/gray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tv_homefragment_life_val"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:text="2일"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp">
-
-                    <TextView
-                        android:id="@+id/tv_homefragment_money"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:text="아낀 돈"
-                        android:textColor="@color/gray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tv_homefragment_money_val"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:text="20000원"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp">
-
-                <TextView
-                    android:id="@+id/tv_homefragment_healthtitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:text="나의 건강 상태"
-                    android:textColor="@color/defaultTextColor"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_homefragment_health"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 20분 - 혈압 맥박 손발 체온 정상"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
+                        </LinearLayout>
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_1"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 8시간 - 혈액 일산화탄소 감소 및 산소 증가"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
 
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_2"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 8시간 - 혈액 일산화탄소 감소 및 산소 증가"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_2"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 24시간 - 심장마비 위험 감소"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_3"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 24시간 - 심장마비 위험 감소"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_3"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 48시간 - 니코틴 부족 적응 및 후각 미각 상승"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_4"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 48시간 - 니코틴 부족 적응 및 후각 미각 상승"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_4"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 72시간 - 기관지 이완 및 폐활량 증가"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_5"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 72시간 - 기관지 이완 및 폐활량 증가"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_5"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 2주 - 혈액순환 좋아짐"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_6"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 2주 - 혈액순환 좋아짐"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_6"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 3개월 - 폐기능 30% 향상"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_7"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 3개월 - 폐기능 30% 향상"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_7"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 9개월 - 폐 섬모 재생 및 폐 정상화 진행"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_8"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 9개월 - 폐 섬모 재생 및 폐 정상화 진행"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_8"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 1년 - 심장마비 위험 흡연자 비해 절반"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_9"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 1년 - 심장마비 위험 흡연자 비해 절반"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_9"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 5년 - 심장마비 위험 비흡연자와 거의 동일"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_10"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 5년 - 심장마비 위험 비흡연자와 거의 동일"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_10"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_homefragment_val10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+
+                            android:maxLines="2"
+                            android:text="금연 10년 - 폐암 위험이 흡연자의 절반"
+                            android:textColor="@color/darkGray"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/pg_homefragment_11"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.9"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
+
+                            <TextView
+                                android:id="@+id/tv_homefragment_val11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="@color/darkGray"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-
-                        android:maxLines="2"
-                        android:text="금연 10년 - 폐암 위험이 흡연자의 절반"
-                        android:textColor="@color/darkGray"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <ProgressBar
-                            android:id="@+id/pg_homefragment_11"
-                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.9"
-                            android:max="100"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/progressbar_pointcolor_horizon" />
-
-                        <TextView
-                            android:id="@+id/tv_homefragment_val11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="0.1"
-                            android:gravity="center"
-                            android:text="100%"
-                            android:textColor="@color/pointColor"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
 
                 </LinearLayout>
-
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
 
+    </androidx.core.widget.NestedScrollView>
 
-</androidx.core.widget.NestedScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_banner_dev">
+
+    </com.google.android.gms.ads.AdView>
+</FrameLayout>

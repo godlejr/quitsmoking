@@ -60,7 +60,7 @@ public class HistoryWritePresenterImpl<V extends HistoryWriteView> extends BaseP
             long diffDays = diffSec / (24 * 60 * 60); //일자수 차이
             long diffHours = diffSec / (60 * 60); //시간 차이
 
-            stmt = "금연 " + diffDays + "일차";
+            stmt = "금연 " + (diffDays+1) + "일차";
 
         }
 
@@ -88,6 +88,8 @@ public class HistoryWritePresenterImpl<V extends HistoryWriteView> extends BaseP
     public void onFinishBtnClick() {
 
         String text = getBaseView().getmContentEt();
+
+       if( text.length() >0){
 
         SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
@@ -126,7 +128,7 @@ public class HistoryWritePresenterImpl<V extends HistoryWriteView> extends BaseP
             long diffDays = diffSec / (24 * 60 * 60); //일자수 차이
             long diffHours = diffSec / (60 * 60); //시간 차이
 
-            dateTitle = "금연 " + diffDays + "일차 (" + todayStr + ")";
+            dateTitle = "금연 " + (diffDays+1) + "일차 (" + todayStr + ")";
         }
 
         history.setDateTitle(dateTitle);
@@ -140,6 +142,8 @@ public class HistoryWritePresenterImpl<V extends HistoryWriteView> extends BaseP
 
         getBaseView().showMessage("작성 완료");
         getBaseView().setActivityFinish();
+
+       }
     }
 
     @Override

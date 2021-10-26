@@ -5,7 +5,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import dongjoo.second.quitsmoking.common.dto.ConfirmCancelDialogDto;
 import dongjoo.second.quitsmoking.common.entity.User;
+import dongjoo.second.quitsmoking.common.flag.ActivityRequestResultFlag;
+import dongjoo.second.quitsmoking.common.flag.DialogFlag;
 import dongjoo.second.quitsmoking.ui.base.presenter.BasePresenterImpl;
 import dongjoo.second.quitsmoking.ui.main.view.MainView;
 
@@ -52,7 +55,7 @@ public class MainPresenterImpl<V extends MainView> extends BasePresenterImpl<V> 
             long diffDays = diffSec / (24 * 60 * 60); //일자수 차이
             long diffHours = diffSec / (60 * 60); //시간 차이
 
-            title = "금연 " + diffDays + "일차";
+            title = "금연 " + (diffDays+1) + "일차";
         }
 
         getBaseView().showToolbarTitle(title);
@@ -61,6 +64,21 @@ public class MainPresenterImpl<V extends MainView> extends BasePresenterImpl<V> 
     @Override
     public void onResume() {
         showTitle();
+    }
+
+    @Override
+    public void onBackPressed() {
+        ConfirmCancelDialogDto confirmCancelDialogDto = new ConfirmCancelDialogDto();
+
+        int flag = DialogFlag.APP_DESTROY_CONFIRM;
+        int requestCode = ActivityRequestResultFlag.CONFIRM_CANCEL_DIALOG_APP_DESTROY_REQUEST;
+
+        getBaseView().navigateToConfirmCancelDialogActivity(confirmCancelDialogDto, flag, requestCode);
+    }
+
+    @Override
+    public void onActivityResultForAppDestroyOk() {
+        getBaseView().destroyApp();
     }
 
 //    @Override

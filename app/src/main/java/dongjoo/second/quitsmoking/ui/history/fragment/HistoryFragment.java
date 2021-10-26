@@ -14,6 +14,12 @@ import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import java.util.List;
 
 import butterknife.BindView;
@@ -58,6 +64,9 @@ public class HistoryFragment extends BaseFragment implements HistoryFragmentView
     @BindView(R.id.tv_history_all_selection)
     TextView mSelectionBtn;
 
+    @BindView(R.id.adView)
+    AdView mAdView;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +77,12 @@ public class HistoryFragment extends BaseFragment implements HistoryFragmentView
         this.mPresenter.onAttach(this);
 
         init();
+
+        MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
     }
 
     protected void init() {
@@ -109,6 +124,10 @@ public class HistoryFragment extends BaseFragment implements HistoryFragmentView
         View view = inflater.inflate(R.layout.fragment_history, container, false);
         ButterKnife.bind(this, view);
         initView();
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        this.mAdView.loadAd(adRequest);
+
         return view;
     }
 

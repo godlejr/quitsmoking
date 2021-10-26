@@ -12,6 +12,12 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import butterknife.BindColor;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -122,6 +128,12 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
     @BindColor(R.color.darkGray)
     int mDarkGrayColor;
 
+    @BindColor(R.color.pointColor)
+    int mPointColor;
+
+    @BindView(R.id.adView)
+    AdView mAdView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,6 +143,15 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
         this.mPresenter.onAttach(this);
 
         init();
+
+        MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
+
     }
 
 
@@ -139,6 +160,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
         initView();
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        this.mAdView.loadAd(adRequest);
+
         return view;
     }
 
@@ -524,6 +549,68 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
     public void setmTv11_10yTextWithDarkGrayColor() {
         this.mTv11_10y.setTextColor(mDarkGrayColor);
     }
+
+
+
+    @Override
+    public void setmTv1_20muTextWithPointColor() {
+        this.mTv1_20mu.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv2_8hTextWithPointColor() {
+        this.mTv2_8h.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv3_24hTextWithPointColor() {
+        this.mTv3_24h.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv4_48hTextWithPointColor() {
+        this.mTv4_48h.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv5_72hTextWithPointColor() {
+        this.mTv5_72h.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv6_2wTextWithPointColor() {
+        this.mTv6_2w.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv7_3moTextWithPointColor() {
+        this.mTv7_3mo.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv8_9moTextWithPointColor() {
+        this.mTv8_9mo.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv9_1yTextWithPointColor() {
+        this.mTv9_1y.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv10_5yTextWithPointColor() {
+        this.mTv10_5y.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv11_10yTextWithPointColor() {
+        this.mTv11_10y.setTextColor(mPointColor);
+    }
+
+
+
+
+
 
     @OnClick(R.id.tv_homefragment_userwrite)
     public void onClickUserWrite(){

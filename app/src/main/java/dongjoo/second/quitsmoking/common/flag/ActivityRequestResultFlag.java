@@ -13,7 +13,7 @@ public class ActivityRequestResultFlag {
 
     public static final int CONFIRM_CANCEL_DIALOG_HISTORY_DELETE_REQUEST = 10011;
 
-    public static final int CONFIRM_CANCEL_DIALOG_LOGOUT_REQUEST = 10020;
+    public static final int CONFIRM_CANCEL_DIALOG_APP_DESTROY_REQUEST = 10020;
 
 
 

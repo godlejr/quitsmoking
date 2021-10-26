@@ -121,6 +121,8 @@ public interface HomeFragmentView extends BaseView {
 
     void setmTv1_20muTextWithDarkGrayColor();
 
+    void setmTv1_20muTextWithPointColor();
+
     void setmTv2_8hTextWithDarkGrayColor();
 
     void setmTv3_24hTextWithDarkGrayColor();
@@ -140,6 +142,26 @@ public interface HomeFragmentView extends BaseView {
     void setmTv10_5yTextWithDarkGrayColor();
 
     void setmTv11_10yTextWithDarkGrayColor();
+
+    void setmTv2_8hTextWithPointColor();
+
+    void setmTv3_24hTextWithPointColor();
+
+    void setmTv4_48hTextWithPointColor();
+
+    void setmTv5_72hTextWithPointColor();
+
+    void setmTv6_2wTextWithPointColor();
+
+    void setmTv7_3moTextWithPointColor();
+
+    void setmTv8_9moTextWithPointColor();
+
+    void setmTv9_1yTextWithPointColor();
+
+    void setmTv10_5yTextWithPointColor();
+
+    void setmTv11_10yTextWithPointColor();
 
     void navigateToUserWriteActivity();
 }

@@ -5,8 +5,20 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="white">#fff</color>
-    <color name="pointColor">#F08080</color>
-<!--
+    <color name="pointColor">#4FC6A7</color>
+<!--ㄴ
+9C7AA6 진보라
+8977AD 연보라
+
+classic blue : 0F4C82
+92B8B1 :mint jin
+#4FC6A7 : mint : 45B5AA
+#F08080 : pinkmully
+
+#2F97DD : blue mully
+
+#8154D1 : pupple
+
     <color name="pointColor">#3498db</color>
 -->
     <color name="gray">#eaeaea</color>

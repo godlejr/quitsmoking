@@ -9,6 +9,9 @@ public class DialogFlag {
      */
     public static final int HISTORY_DELETE_CONFIRM = 1;
 
+    public static final int APP_DESTROY_CONFIRM = 2;
+
+
 
     /**
      * Confirm Dialog title
@@ -17,6 +20,7 @@ public class DialogFlag {
      */
     public static final String HISTORY_DELETE_CONFIRM_TITLE = "삭제 하시겠습니까?";
 
+    public static final String APP_DESTROY_CONFIRM_TITLE = "종료 하시겠습니까?";
 
     /**
      * Search List Dialog

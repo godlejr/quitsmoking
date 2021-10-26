@@ -137,6 +137,9 @@ public class UserWritePresenterImpl<V extends UserWriteView> extends BasePresent
 
             user.setMeanOfSmoking(meanOfSmoking);
             user.setCostOfSmoking(costOfSmoking);
+
+            getBaseView().setSharedPreferUser(user);
+
         } else {
             User newUser = new User();
             newUser.setYear(year);

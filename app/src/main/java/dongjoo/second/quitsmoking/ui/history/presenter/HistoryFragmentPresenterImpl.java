@@ -54,8 +54,10 @@ public class HistoryFragmentPresenterImpl<V extends HistoryFragmentView> extends
             if (historiesSize > 0) {
                 getBaseView().goneHistoryEmptyContent();
                 getBaseView().showDeleteBtn();
+                getBaseView().showSelectionBtn();
             } else {
                 getBaseView().goneDeleteBtn();
+                getBaseView().goneSelectionBtn();
                 getBaseView().showHistoryEmptyContent();
             }
 

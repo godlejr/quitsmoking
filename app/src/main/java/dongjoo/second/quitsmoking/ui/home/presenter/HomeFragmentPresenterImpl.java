@@ -127,86 +127,130 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             //애니 메이션
             boolean isAnim = true;
 
-            double per1 = (((double)diffMinutes / 20) * 100);
+            double per1 = (((double) diffMinutes / 20) * 100);
 
             if (per1 < 100) {
                 getBaseView().setmTv1_20muTextWithDarkGrayColor();
                 getBaseView().setmTv1_20muContent((int) per1 + "%");
                 getBaseView().setmPg1_20muContent((int) per1, isAnim);
+            } else if (per1 >= 100) {
+                getBaseView().setmTv1_20muTextWithPointColor();
+                getBaseView().setmTv1_20muContent(100 + "%");
+                getBaseView().setmPg1_20muContent(100, isAnim);
             }
 
-            double per2 = (((double)diffMinutes / (8 * 60)) * 100);
+            double per2 = (((double) diffMinutes / (8 * 60)) * 100);
 
             if (per2 < 100) {
 
                 getBaseView().setmTv2_8hTextWithDarkGrayColor();
                 getBaseView().setmTv2_8hContent((int) per2 + "%");
                 getBaseView().setmPg2_8hContent((int) per2, isAnim);
+            } else if (per2 >= 100) {
+                getBaseView().setmTv2_8hTextWithPointColor();
+                getBaseView().setmTv2_8hContent(100 + "%");
+                getBaseView().setmPg2_8hContent(100, isAnim);
             }
 
 
-            double per3 = (((double)diffMinutes / (24 * 60)) * 100);
+            double per3 = (((double) diffMinutes / (24 * 60)) * 100);
             if (per3 < 100) {
                 getBaseView().setmTv3_24hTextWithDarkGrayColor();
                 getBaseView().setmTv3_24hContent((int) per3 + "%");
                 getBaseView().setmPg3_24hContent((int) per3, isAnim);
+            } else if (per3 >= 100) {
+                getBaseView().setmTv3_24hTextWithPointColor();
+                getBaseView().setmTv3_24hContent(100 + "%");
+                getBaseView().setmPg3_24hContent(100, isAnim);
             }
 
-            double per4 = (((double)diffMinutes / (2 * 24 * 60)) * 100);
+            double per4 = (((double) diffMinutes / (2 * 24 * 60)) * 100);
             if (per4 < 100) {
                 getBaseView().setmTv4_48hTextWithDarkGrayColor();
                 getBaseView().setmTv4_48hContent((int) per4 + "%");
                 getBaseView().setmPg4_48hContent((int) per4, isAnim);
+            } else if (per4 >= 100) {
+                getBaseView().setmTv4_48hTextWithPointColor();
+                getBaseView().setmTv4_48hContent(100 + "%");
+                getBaseView().setmPg4_48hContent(100, isAnim);
             }
 
 
-            double per5 = (((double)diffMinutes / (3 * 24 * 60)) * 100);
+            double per5 = (((double) diffMinutes / (3 * 24 * 60)) * 100);
             if (per5 < 100) {
                 getBaseView().setmTv5_72hTextWithDarkGrayColor();
                 getBaseView().setmTv5_72hContent((int) per5 + "%");
                 getBaseView().setmPg5_72hContent((int) per5, isAnim);
+            } else if (per5 >= 100) {
+                getBaseView().setmTv5_72hTextWithPointColor();
+                getBaseView().setmTv5_72hContent(100 + "%");
+                getBaseView().setmPg5_72hContent(100, isAnim);
             }
 
-            double per6 = (((double)diffMinutes / (14 * 24 * 60)) * 100);
+            double per6 = (((double) diffMinutes / (14 * 24 * 60)) * 100);
             if (per6 < 100) {
                 getBaseView().setmTv6_2wTextWithDarkGrayColor();
                 getBaseView().setmTv6_2wContent((int) per6 + "%");
                 getBaseView().setmPg6_2wContent((int) per6, isAnim);
+            } else if (per6 >= 100) {
+                getBaseView().setmTv6_2wTextWithPointColor();
+                getBaseView().setmTv6_2wContent(100 + "%");
+                getBaseView().setmPg6_2wContent(100, isAnim);
             }
 
-            double per7 = (((double)diffMinutes / (90 * 24 * 60)) * 100);
+            double per7 = (((double) diffMinutes / (90 * 24 * 60)) * 100);
             if (per7 < 100) {
                 getBaseView().setmTv7_3moTextWithDarkGrayColor();
                 getBaseView().setmTv7_3moContent((int) per7 + "%");
                 getBaseView().setmPg7_3moContent((int) per7, isAnim);
+            } else if (per7 >= 100) {
+                getBaseView().setmTv7_3moTextWithPointColor();
+                getBaseView().setmTv7_3moContent(100 + "%");
+                getBaseView().setmPg7_3moContent(100, isAnim);
             }
 
-            double per8 = (((double)diffMinutes / (270 * 24 * 60)) * 100);
+            double per8 = (((double) diffMinutes / (270 * 24 * 60)) * 100);
             if (per8 < 100) {
                 getBaseView().setmTv8_9moTextWithDarkGrayColor();
                 getBaseView().setmTv8_9moContent((int) per8 + "%");
                 getBaseView().setmPg8_9moContent((int) per8, isAnim);
+            } else if (per8 >= 100) {
+                getBaseView().setmTv8_9moTextWithPointColor();
+                getBaseView().setmTv8_9moContent(100 + "%");
+                getBaseView().setmPg8_9moContent(100, isAnim);
             }
 
-            double per9 = (((double)diffMinutes / (365 * 24 * 60)) * 100);
+            double per9 = (((double) diffMinutes / (365 * 24 * 60)) * 100);
             if (per9 < 100) {
                 getBaseView().setmTv9_1yTextWithDarkGrayColor();
                 getBaseView().setmTv9_1yContent((int) per9 + "%");
                 getBaseView().setmPg9_1yContent((int) per9, isAnim);
+            } else if (per9 >= 100) {
+                getBaseView().setmTv9_1yTextWithPointColor();
+                getBaseView().setmTv9_1yContent(100 + "%");
+                getBaseView().setmPg9_1yContent(100, isAnim);
             }
 
-            double per10 = (((double)diffMinutes / (5 * 365 * 24 * 60)) * 100);
+            double per10 = (((double) diffMinutes / (5 * 365 * 24 * 60)) * 100);
             if (per10 < 100) {
                 getBaseView().setmTv10_5yTextWithDarkGrayColor();
                 getBaseView().setmTv10_5yContent((int) per10 + "%");
                 getBaseView().setmPg10_5yContent((int) per10, isAnim);
+            } else if (per10 >= 100) {
+                getBaseView().setmTv10_5yTextWithPointColor();
+                getBaseView().setmTv10_5yContent(100 + "%");
+                getBaseView().setmPg10_5yContent(100, isAnim);
             }
 
-            double per11 = (((double)diffMinutes / (10 * 365 * 24 * 60)) * 100);
+            double per11 = (((double) diffMinutes / (10 * 365 * 24 * 60)) * 100);
             if (per11 < 100) {
                 getBaseView().setmTv11_10yTextWithDarkGrayColor();
                 getBaseView().setmTv11_10yContent((int) per11 + "%");
                 getBaseView().setmPg11_10yContent((int) per11, isAnim);
+            } else if (per11 >= 100) {
+                getBaseView().setmTv11_10yTextWithPointColor();
+                getBaseView().setmTv11_10yContent(100 + "%");
+                getBaseView().setmPg11_10yContent(100, isAnim);
             }
 
         } else {

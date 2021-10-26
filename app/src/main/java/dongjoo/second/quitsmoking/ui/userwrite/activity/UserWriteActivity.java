@@ -12,6 +12,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -61,6 +67,9 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
     @BindView(R.id.in_userwrite_toolbar)
     View mToolbar;
 
+    @BindView(R.id.adView)
+    AdView mAdView;
+
     private IncludedToolbarLayout mIncludedToolbarLayout;
 
 
@@ -74,6 +83,16 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
         this.mPresenter.onAttach(this);
 
         init();
+
+
+        MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        this.mAdView.loadAd(adRequest);
     }
 
 
