@@ -211,7 +211,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/ad_banner_dev">
+        ads:adUnitId="@string/ad_banner_prod_6">
 
     </com.google.android.gms.ads.AdView>
 </FrameLayout>

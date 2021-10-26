@@ -9,6 +9,10 @@
     <string name="ad_banner_dev">ca-app-pub-3940256099942544/6300978111</string>
     <string name="ad_banner_prod_1">ca-app-pub-9788689455127875/6477675295</string>
     <string name="ad_banner_prod_2">ca-app-pub-9788689455127875/3085225195</string>
+    <string name="ad_banner_prod_3">ca-app-pub-9788689455127875/5836662991</string>
+    <string name="ad_banner_prod_4">ca-app-pub-9788689455127875/9584336311</string>
+    <string name="ad_banner_prod_5">ca-app-pub-9788689455127875/1081840390</string>
+    <string name="ad_banner_prod_6">ca-app-pub-9788689455127875/3353969883</string>
 
     <string name="ad_front_dev">ca-app-pub-3940256099942544/1033173712</string>
     <string name="ad_front_prod_1">ca-app-pub-9788689455127875/8992157996</string>

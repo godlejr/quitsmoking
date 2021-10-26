@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/ad_banner_dev">
+        ads:adUnitId="@string/ad_banner_prod_1">
 
     </com.google.android.gms.ads.AdView>
 

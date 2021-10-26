@@ -177,7 +177,7 @@
         android:layout_marginBottom="60dp"
         android:layout_gravity="bottom|center_horizontal"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/ad_banner_dev">
+        ads:adUnitId="@string/ad_banner_prod_2">
 
     </com.google.android.gms.ads.AdView>
 

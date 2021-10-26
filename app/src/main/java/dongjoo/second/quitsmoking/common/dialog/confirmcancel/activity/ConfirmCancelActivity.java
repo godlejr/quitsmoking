@@ -41,7 +41,7 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
     @BindView(R.id.adView)
     AdView mAdView;
 
-    @BindString(R.string.ad_front_dev)
+    @BindString(R.string.ad_front_prod_1)
     String mAdFrontId;
 
     private InterstitialAd mInterstitialAd;

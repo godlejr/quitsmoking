@@ -3,14 +3,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "dongjoo.second.quitsmoking"
         minSdk 19
-        targetSdk 28
-        versionCode 1
-        versionName "1.0"
+        targetSdk 30
+        versionCode 4
+        versionName "1.0.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
