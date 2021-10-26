@@ -34,7 +34,7 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
     private DatePickerDialog.OnDateSetListener onDateSetListener = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mPresenter.onDateSet(year, monthOfYear, dayOfMonth);
+            mPresenter.onDateSet(year, monthOfYear+1, dayOfMonth);
         }
     };
 

@@ -55,7 +55,7 @@ public class UserWritePresenterImpl<V extends UserWriteView> extends BasePresent
         //setting dialog (date, time)
         //24시간 여부
         boolean is24 = true;
-        getBaseView().setDatePickerDialog(year, month, day);
+        getBaseView().setDatePickerDialog(year, month -1 , day);
         getBaseView().setTimePickerDialog(hour, minute, is24);
 
         //초기 셋팅
