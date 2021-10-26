@@ -13,6 +13,42 @@ public interface HomeFragmentView extends BaseView {
 
     void goneUserEmptyContent();
 
+    void setmTv12_1wContent(String content);
+
+    void setmTv13_3wContent(String content);
+
+    void setmTv14_4wContent(String content);
+
+    void setmTv15_6wContent(String content);
+
+    void setmTv16_2mContent(String content);
+
+    void setmTv17_2_5mContent(String content);
+
+    void setmTv18_4_5mContent(String content);
+
+    void setmTv19_6mContent(String content);
+
+    String getmTv12_1wContent();
+
+    String getmTv13_3wContent();
+
+    String getmTv14_4wContent();
+
+    String getmTv15_6wContent();
+
+    String getmTv16_2mContent();
+
+    String getmTv17_2_5mContent();
+
+    String getmTv18_4_5mContent();
+
+    String getmTv19_6mContent();
+
+    String getmMyLevelTvContent();
+
+    void setmMyLevelTvContent(String content);
+
     String getmNoticeTvContent();
 
     void setmNoticeTvContent(String content);
@@ -119,6 +155,22 @@ public interface HomeFragmentView extends BaseView {
 
     void setmPg11_10yContent(int progress, boolean anim);
 
+    void setmPg12_1wContent(int progress, boolean anim);
+
+    void setmPg13_3wContent(int progress, boolean anim);
+
+    void setmPg14_4wContent(int progress, boolean anim);
+
+    void setmPg15_6wContent(int progress, boolean anim);
+
+    void setmPg16_2mContent(int progress, boolean anim);
+
+    void setmPg17_2_5mContent(int progress, boolean anim);
+
+    void setmPg18_4_5mContent(int progress, boolean anim);
+
+    void setmPg19_6mContent(int progress, boolean anim);
+
     void setmTv1_20muTextWithDarkGrayColor();
 
     void setmTv1_20muTextWithPointColor();
@@ -162,6 +214,38 @@ public interface HomeFragmentView extends BaseView {
     void setmTv10_5yTextWithPointColor();
 
     void setmTv11_10yTextWithPointColor();
+
+    void setmTv12_1wTextWithDarkGrayColor();
+
+    void setmTv13_3wTextWithDarkGrayColor();
+
+    void setmTv14_4wTextWithDarkGrayColor();
+
+    void setmTv15_6wTextWithDarkGrayColor();
+
+    void setmTv16_2mTextWithDarkGrayColor();
+
+    void setmTv17_2_5mTextWithDarkGrayColor();
+
+    void setmTv18_4_5mTextWithDarkGrayColor();
+
+    void setmTv19_6mTextWithDarkGrayColor();
+
+    void setmTv12_1wTextWithPointColor();
+
+    void setmTv13_3wTextWithPointColor();
+
+    void setmTv14_4wTextWithPointColor();
+
+    void setmTv15_6wTextWithPointColor();
+
+    void setmTv16_2mTextWithPointColor();
+
+    void setmTv17_2_5mTextWithPointColor();
+
+    void setmTv18_4_5mTextWithPointColor();
+
+    void setmTv19_6mTextWithPointColor();
 
     void navigateToUserWriteActivity();
 }

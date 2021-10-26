@@ -83,6 +83,30 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
     @BindView(R.id.tv_homefragment_val11)
     TextView mTv11_10y;
 
+    @BindView(R.id.tv_homefragment_val5_9)
+    TextView mTv12_1w;
+
+    @BindView(R.id.tv_homefragment_val6_1)
+    TextView mTv13_3w;
+
+    @BindView(R.id.tv_homefragment_val6_2)
+    TextView mTv14_4w;
+
+    @BindView(R.id.tv_homefragment_val6_25)
+    TextView mTv15_6w;
+
+    @BindView(R.id.tv_homefragment_val6_3)
+    TextView mTv16_2m;
+
+    @BindView(R.id.tv_homefragment_val6_4)
+    TextView mTv17_2_5m;
+
+    @BindView(R.id.tv_homefragment_val7_1)
+    TextView mTv18_4_5m;
+
+    @BindView(R.id.tv_homefragment_val7_2)
+    TextView mTv19_6m;
+
 
     @BindView(R.id.pg_homefragment_1)
     ProgressBar mPg1_20mu;
@@ -117,12 +141,40 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
     @BindView(R.id.pg_homefragment_11)
     ProgressBar mPg11_10y;
 
+    @BindView(R.id.pg_homefragment_5_9)
+    ProgressBar mPg12_1w;
+
+    @BindView(R.id.pg_homefragment_6_1)
+    ProgressBar mPg13_3w;
+
+    @BindView(R.id.pg_homefragment_6_2)
+    ProgressBar mPg14_4w;
+
+    @BindView(R.id.pg_homefragment_6_25)
+    ProgressBar mPg15_6w;
+
+    @BindView(R.id.pg_homefragment_6_3)
+    ProgressBar mPg16_2m;
+
+    @BindView(R.id.pg_homefragment_6_4)
+    ProgressBar mPg17_2_5m;
+
+    @BindView(R.id.pg_homefragment_7_1)
+    ProgressBar mPg18_4_5m;
+
+    @BindView(R.id.pg_homefragment_7_2)
+    ProgressBar mPg19_6m;
+
 
     @BindView(R.id.ll_homefragment_user)
     LinearLayout mUser;
 
     @BindView(R.id.ll_homefragment_userempty)
     LinearLayout mUserEmpty;
+
+
+    @BindView(R.id.tv_homefragment_mylevel)
+    TextView mMyLevelTv;
 
 
     @BindColor(R.color.darkGray)
@@ -149,7 +201,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-
 
 
     }
@@ -204,6 +255,98 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
         if (this.mUserEmpty.getVisibility() == View.VISIBLE) {
             this.mUserEmpty.setVisibility(View.GONE);
         }
+    }
+
+
+    @Override
+    public void setmTv12_1wContent(String content) {
+        this.mTv12_1w.setText(content);
+    }
+
+    @Override
+    public void setmTv13_3wContent(String content) {
+        this.mTv13_3w.setText(content);
+    }
+
+    @Override
+    public void setmTv14_4wContent(String content) {
+        this.mTv14_4w.setText(content);
+    }
+
+    @Override
+    public void setmTv15_6wContent(String content) {
+        this.mTv15_6w.setText(content);
+    }
+
+    @Override
+    public void setmTv16_2mContent(String content) {
+        this.mTv16_2m.setText(content);
+    }
+
+    @Override
+    public void setmTv17_2_5mContent(String content) {
+        this.mTv17_2_5m.setText(content);
+    }
+
+    @Override
+    public void setmTv18_4_5mContent(String content) {
+        this.mTv18_4_5m.setText(content);
+    }
+
+    @Override
+    public void setmTv19_6mContent(String content) {
+        this.mTv19_6m.setText(content);
+    }
+
+
+    @Override
+    public String getmTv12_1wContent() {
+        return mTv12_1w.getText().toString();
+    }
+
+    @Override
+    public String getmTv13_3wContent() {
+        return mTv13_3w.getText().toString();
+    }
+
+    @Override
+    public String getmTv14_4wContent() {
+        return mTv14_4w.getText().toString();
+    }
+
+    @Override
+    public String getmTv15_6wContent() {
+        return mTv15_6w.getText().toString();
+    }
+
+    @Override
+    public String getmTv16_2mContent() {
+        return mTv16_2m.getText().toString();
+    }
+
+    @Override
+    public String getmTv17_2_5mContent() {
+        return mTv17_2_5m.getText().toString();
+    }
+
+    @Override
+    public String getmTv18_4_5mContent() {
+        return mTv18_4_5m.getText().toString();
+    }
+
+    @Override
+    public String getmTv19_6mContent() {
+        return mTv19_6m.getText().toString();
+    }
+
+    @Override
+    public String getmMyLevelTvContent() {
+        return this.mMyLevelTv.getText().toString();
+    }
+
+    @Override
+    public void setmMyLevelTvContent(String content) {
+        this.mMyLevelTv.setText(content);
     }
 
     @Override
@@ -495,6 +638,54 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg12_1wContent(int progress, boolean anim) {
+        this.mPg12_1w.setProgress(progress, anim);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg13_3wContent(int progress, boolean anim) {
+        this.mPg13_3w.setProgress(progress, anim);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg14_4wContent(int progress, boolean anim) {
+        this.mPg14_4w.setProgress(progress, anim);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg15_6wContent(int progress, boolean anim) {
+        this.mPg15_6w.setProgress(progress, anim);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg16_2mContent(int progress, boolean anim) {
+        this.mPg16_2m.setProgress(progress, anim);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg17_2_5mContent(int progress, boolean anim) {
+        this.mPg17_2_5m.setProgress(progress, anim);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg18_4_5mContent(int progress, boolean anim) {
+        this.mPg18_4_5m.setProgress(progress, anim);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void setmPg19_6mContent(int progress, boolean anim) {
+        this.mPg19_6m.setProgress(progress, anim);
+    }
+
     @Override
     public void setmTv1_20muTextWithDarkGrayColor() {
         this.mTv1_20mu.setTextColor(mDarkGrayColor);
@@ -549,7 +740,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
     public void setmTv11_10yTextWithDarkGrayColor() {
         this.mTv11_10y.setTextColor(mDarkGrayColor);
     }
-
 
 
     @Override
@@ -608,12 +798,89 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
     }
 
 
+    @Override
+    public void setmTv12_1wTextWithDarkGrayColor() {
+        this.mTv12_1w.setTextColor(mDarkGrayColor);
+    }
+
+    @Override
+    public void setmTv13_3wTextWithDarkGrayColor() {
+        this.mTv13_3w.setTextColor(mDarkGrayColor);
+    }
+
+    @Override
+    public void setmTv14_4wTextWithDarkGrayColor() {
+        this.mTv14_4w.setTextColor(mDarkGrayColor);
+    }
+
+    @Override
+    public void setmTv15_6wTextWithDarkGrayColor() {
+        this.mTv15_6w.setTextColor(mDarkGrayColor);
+    }
+
+    @Override
+    public void setmTv16_2mTextWithDarkGrayColor() {
+        this.mTv16_2m.setTextColor(mDarkGrayColor);
+    }
+
+    @Override
+    public void setmTv17_2_5mTextWithDarkGrayColor() {
+        this.mTv17_2_5m.setTextColor(mDarkGrayColor);
+    }
+
+    @Override
+    public void setmTv18_4_5mTextWithDarkGrayColor() {
+        this.mTv18_4_5m.setTextColor(mDarkGrayColor);
+    }
+
+    @Override
+    public void setmTv19_6mTextWithDarkGrayColor() {
+        this.mTv19_6m.setTextColor(mDarkGrayColor);
+    }
 
 
+    @Override
+    public void setmTv12_1wTextWithPointColor() {
+        this.mTv12_1w.setTextColor(mPointColor);
+    }
 
+    @Override
+    public void setmTv13_3wTextWithPointColor() {
+        this.mTv13_3w.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv14_4wTextWithPointColor() {
+        this.mTv14_4w.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv15_6wTextWithPointColor() {
+        this.mTv15_6w.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv16_2mTextWithPointColor() {
+        this.mTv16_2m.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv17_2_5mTextWithPointColor() {
+        this.mTv17_2_5m.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv18_4_5mTextWithPointColor() {
+        this.mTv18_4_5m.setTextColor(mPointColor);
+    }
+
+    @Override
+    public void setmTv19_6mTextWithPointColor() {
+        this.mTv19_6m.setTextColor(mPointColor);
+    }
 
     @OnClick(R.id.tv_homefragment_userwrite)
-    public void onClickUserWrite(){
+    public void onClickUserWrite() {
         this.mPresenter.onClickUserWrite();
     }
 

@@ -187,6 +187,23 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 getBaseView().setmPg5_72hContent(100, isAnim);
             }
 
+
+
+
+            //1주
+            double per5_1 = (((double) diffMinutes / (7 * 24 * 60)) * 100);
+            if (per5_1 < 100) {
+                getBaseView().setmTv12_1wTextWithDarkGrayColor();
+                getBaseView().setmTv12_1wContent((int) per5_1 + "%");
+                getBaseView().setmPg12_1wContent((int) per5_1, isAnim);
+            } else if (per5_1 >= 100) {
+                getBaseView().setmTv12_1wTextWithPointColor();
+                getBaseView().setmTv12_1wContent(100 + "%");
+                getBaseView().setmPg12_1wContent(100, isAnim);
+            }
+
+
+
             double per6 = (((double) diffMinutes / (14 * 24 * 60)) * 100);
             if (per6 < 100) {
                 getBaseView().setmTv6_2wTextWithDarkGrayColor();
@@ -198,6 +215,70 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 getBaseView().setmPg6_2wContent(100, isAnim);
             }
 
+            //3주
+
+            double per6_1 = (((double) diffMinutes / (21 * 24 * 60)) * 100);
+            if (per6_1 < 100) {
+                getBaseView().setmTv13_3wTextWithDarkGrayColor();
+                getBaseView().setmTv13_3wContent((int) per6_1 + "%");
+                getBaseView().setmPg13_3wContent((int) per6_1, isAnim);
+            } else if (per6_1 >= 100) {
+                getBaseView().setmTv13_3wTextWithPointColor();
+                getBaseView().setmTv13_3wContent(100 + "%");
+                getBaseView().setmPg13_3wContent(100, isAnim);
+            }
+
+            //4주
+            double per6_2 = (((double) diffMinutes / (28 * 24 * 60)) * 100);
+            if (per6_2 < 100) {
+                getBaseView().setmTv14_4wTextWithDarkGrayColor();
+                getBaseView().setmTv14_4wContent((int) per6_2 + "%");
+                getBaseView().setmPg14_4wContent((int) per6_2, isAnim);
+            } else if (per6_2 >= 100) {
+                getBaseView().setmTv14_4wTextWithPointColor();
+                getBaseView().setmTv14_4wContent(100 + "%");
+                getBaseView().setmPg14_4wContent(100, isAnim);
+            }
+
+
+            //6주
+            double per6_25 = (((double) diffMinutes / (42 * 24 * 60)) * 100);
+            if (per6_25 < 100) {
+                getBaseView().setmTv15_6wTextWithDarkGrayColor();
+                getBaseView().setmTv15_6wContent((int) per6_25 + "%");
+                getBaseView().setmPg15_6wContent((int) per6_25, isAnim);
+            } else if (per6_25 >= 100) {
+                getBaseView().setmTv15_6wTextWithPointColor();
+                getBaseView().setmTv15_6wContent(100 + "%");
+                getBaseView().setmPg15_6wContent(100, isAnim);
+            }
+
+            //2개월
+            double per6_3 = (((double) diffMinutes / (60 * 24 * 60)) * 100);
+            if (per6_3 < 100) {
+                getBaseView().setmTv16_2mTextWithDarkGrayColor();
+                getBaseView().setmTv16_2mContent((int) per6_3 + "%");
+                getBaseView().setmPg16_2mContent((int) per6_3, isAnim);
+            } else if (per6_3 >= 100) {
+                getBaseView().setmTv16_2mTextWithPointColor();
+                getBaseView().setmTv16_2mContent(100 + "%");
+                getBaseView().setmPg16_2mContent(100, isAnim);
+            }
+
+            //2.5개월
+            double per6_4 = (((double) diffMinutes / (75 * 24 * 60)) * 100);
+            if (per6_4 < 100) {
+                getBaseView().setmTv17_2_5mTextWithDarkGrayColor();
+                getBaseView().setmTv17_2_5mContent((int) per6_4 + "%");
+                getBaseView().setmPg17_2_5mContent((int) per6_4, isAnim);
+            } else if (per6_4 >= 100) {
+                getBaseView().setmTv17_2_5mTextWithPointColor();
+                getBaseView().setmTv17_2_5mContent(100 + "%");
+                getBaseView().setmPg17_2_5mContent(100, isAnim);
+            }
+
+
+
             double per7 = (((double) diffMinutes / (90 * 24 * 60)) * 100);
             if (per7 < 100) {
                 getBaseView().setmTv7_3moTextWithDarkGrayColor();
@@ -208,6 +289,36 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 getBaseView().setmTv7_3moContent(100 + "%");
                 getBaseView().setmPg7_3moContent(100, isAnim);
             }
+
+
+            //4.5 m
+            double per7_1 = (((double) diffMinutes / (135 * 24 * 60)) * 100);
+            if (per7_1 < 100) {
+                getBaseView().setmTv18_4_5mTextWithDarkGrayColor();
+                getBaseView().setmTv18_4_5mContent((int) per7_1 + "%");
+                getBaseView().setmPg18_4_5mContent((int) per7_1, isAnim);
+            } else if (per7_1 >= 100) {
+                getBaseView().setmTv18_4_5mTextWithPointColor();
+                getBaseView().setmTv18_4_5mContent(100 + "%");
+                getBaseView().setmPg18_4_5mContent(100, isAnim);
+            }
+
+
+
+
+            // 6m
+            double per7_2 = (((double) diffMinutes / (180 * 24 * 60)) * 100);
+            if (per7_2 < 100) {
+                getBaseView().setmTv19_6mTextWithDarkGrayColor();
+                getBaseView().setmTv19_6mContent((int) per7_2 + "%");
+                getBaseView().setmPg19_6mContent((int) per7_2, isAnim);
+            } else if (per7_2 >= 100) {
+                getBaseView().setmTv19_6mTextWithPointColor();
+                getBaseView().setmTv19_6mContent(100 + "%");
+                getBaseView().setmPg19_6mContent(100, isAnim);
+            }
+
+
 
             double per8 = (((double) diffMinutes / (270 * 24 * 60)) * 100);
             if (per8 < 100) {
@@ -231,6 +342,7 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 getBaseView().setmPg9_1yContent(100, isAnim);
             }
 
+
             double per10 = (((double) diffMinutes / (5 * 365 * 24 * 60)) * 100);
             if (per10 < 100) {
                 getBaseView().setmTv10_5yTextWithDarkGrayColor();
@@ -253,12 +365,28 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 getBaseView().setmPg11_10yContent(100, isAnim);
             }
 
+            String myLevel = "Lv.1 지옥의 3일";
+            if (per5<100){
+                myLevel = "Lv.1 지옥의 3일";
+            }else if(per6_2 <100){
+                myLevel = "Lv.2 욕구의 인내";
+            }else if(per7_1 <100){
+                myLevel = "Lv.3 건강의 회복";
+            }else if(per9 < 100){
+                myLevel = "Lv.4 방심 금지령";
+            }else{
+                myLevel ="Lv.5 금연 끝판왕";
+            }
+
+            getBaseView().setmMyLevelTvContent(myLevel);
         } else {
 
             getBaseView().goneUserContent();
             getBaseView().showUserEmptyContent();
 
         }
+
+
 
 
     }
