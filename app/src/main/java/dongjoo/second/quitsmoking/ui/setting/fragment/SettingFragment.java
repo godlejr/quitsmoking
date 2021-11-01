@@ -1,6 +1,7 @@
 package dongjoo.second.quitsmoking.ui.setting.fragment;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -118,6 +119,22 @@ public class SettingFragment extends BaseFragment implements SettingFragmentView
     public void navigateToUserWriteActivity() {
         Intent intent = new Intent(this.mContext, UserWriteActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void navigateToGoogleAppStore() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=dongjoo.second.quitsmoking"));
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToShareApp() {
+        Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, "https://dongjoo-kim.tistory.com/61");
+
+        Intent chooser = Intent.createChooser(intent, "초간단 금연일기 공유하기");
+        startActivity(chooser);
     }
 
     @Override

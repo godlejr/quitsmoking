@@ -8,5 +8,9 @@ public interface SettingFragmentView extends BaseView {
 
     void navigateToUserWriteActivity();
 
+    void navigateToGoogleAppStore();
+
+    void navigateToShareApp();
+
     void navigateToDevEmail();
 }

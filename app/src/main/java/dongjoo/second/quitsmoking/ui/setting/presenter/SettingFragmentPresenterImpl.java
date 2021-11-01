@@ -51,11 +51,11 @@ public class SettingFragmentPresenterImpl<V extends SettingFragmentView> extends
 
     @Override
     public void onClickPromotion() {
-
+        getBaseView().navigateToShareApp();
     }
 
     @Override
     public void onClickComment() {
-
+        getBaseView().navigateToGoogleAppStore();
     }
 }
