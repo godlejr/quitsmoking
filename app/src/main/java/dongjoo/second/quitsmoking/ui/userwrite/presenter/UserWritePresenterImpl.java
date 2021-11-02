@@ -31,7 +31,7 @@ public class UserWritePresenterImpl<V extends UserWriteView> extends BasePresent
         int hour = 0;
         int minute = 0;
         int meanOfSmoking = 20;
-        int costOfSmoking = 4500;
+        int costOfSmoking = 0;
 
         if (user != null) {
             year = user.getYear();

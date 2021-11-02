@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">초간단 금연일기</string>
-    <string name="dev_email">djkim0644@gmail.com</string>
+    <string name="dev_email" translatable="false">djkim0644@gmail.com</string>
 
     <!--BaseView-->
     <string name="quitSmokingStatements1">담배, 그거 독약입니다</string>
@@ -16,7 +16,7 @@
     <string name="quitSmokingStatements11">흡연은 확실한 자살 행위</string>
 
     <string name="history_delete_confirm">삭제 하시겠습니까?</string>
-    <string name="app_destroy_confirm">종 하시겠습니까?</string>
+    <string name="app_destroy_confirm">종료 하시겠습니까?</string>
 
 
     <!-- home view-->
@@ -62,10 +62,10 @@
 
     <!--histories view-->
     <string name="history_all_selection">전체선택</string>
-    <string name="history_selection_delete">전체선택</string>
-    <string name="history_no_items">금연 일기를 작성해 주세요</string>
+    <string name="history_selection_delete">선택삭제</string>
+    <string name="history_no_items">금연 일기를 작성해주세요</string>
 
-    <string name='history_write_question1'>오늘 금연 성공했나요?</string>
+    <string name='history_write_question1'>오늘 금연은 성공했나요?</string>
     <string name='history_write_hint'>하루의 일기를 써보세요</string>
 
     <!--setting view-->
@@ -100,8 +100,8 @@
     <string name="word_fix_hours">시간</string>
     <string name="word_fix_minutes">분</string>
     <string name="word_fix_passed">경과</string>
-    <string name="word_fix_extension">경과</string>
-    <string name="word_fix_currency">원</string>
+    <string name="word_fix_extension">연장</string>
+    <string name="word_fix_currency" >원</string>
 
 
     <!-- title -->
@@ -126,8 +126,8 @@
     <string name="tab_title3">설정</string>
 
     <!-- URL-->
-    <string name="url_playstore">https://play.google.com/store/apps/details?id=dongjoo.second.quitsmoking</string>
-    <string name="url_blog_promotion">https://dongjoo-kim.tistory.com/61</string>
+    <string name="url_playstore" translatable="false">https://play.google.com/store/apps/details?id=dongjoo.second.quitsmoking</string>
+    <string name="url_blog_promotion" translatable="false">https://dongjoo-kim.tistory.com/61</string>
 
     <!--ad mob-->
     <string name="ad_app_id">ca-app-pub-9788689455127875~1070463615</string>

@@ -16,7 +16,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -78,9 +79,10 @@
                     <TextView
                         android:id="@+id/tv_homefragment_userwrite"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/btn_selector_bg_pointcolor_white"
                         android:gravity="center"
+                        android:minHeight="40dp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:text="@string/home_no_user"
@@ -239,10 +241,10 @@
                         android:id="@+id/tv_homefragment_healthtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
                         android:gravity="center_vertical"
                         android:text="@string/home_my_heath_state"
                         android:textColor="@color/defaultTextColor"
-                        android:layout_alignParentLeft="true"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -268,10 +270,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:paddingLeft="30dp"
-                        android:paddingRight="30dp"
                         android:layout_marginTop="20dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -282,22 +284,23 @@
                             android:textColor="@color/pointColor"
                             android:textSize="14sp"
                             android:textStyle="bold" />
-                        
-                    </LinearLayout> 
-                    
+
+                    </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_20m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -338,16 +341,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_8h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -388,16 +392,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_24h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -438,16 +443,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_48h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -488,16 +494,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_72h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -538,10 +545,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:paddingLeft="30dp"
-                        android:paddingRight="30dp"
                         android:layout_marginTop="20dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -558,16 +565,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_1w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -609,16 +617,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_2w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -659,16 +668,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_3w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -709,16 +719,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_4w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -760,11 +771,11 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:paddingLeft="30dp"
-                        android:paddingRight="30dp"
                         android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
 
-                        android:orientation="vertical">
+                        android:paddingRight="30dp">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -781,16 +792,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_6w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -831,16 +843,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_2m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -881,16 +894,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_2_5m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -931,16 +945,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_3m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -981,16 +996,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_4_5m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -1032,11 +1048,11 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:paddingLeft="30dp"
-                        android:paddingRight="30dp"
                         android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
 
-                        android:orientation="vertical">
+                        android:paddingRight="30dp">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1053,16 +1069,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_6m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -1103,16 +1120,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_9m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -1153,16 +1171,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_1y"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -1199,14 +1218,15 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:paddingLeft="30dp"
-                        android:paddingRight="30dp"
                         android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
 
-                        android:orientation="vertical">
+                        android:paddingRight="30dp">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1223,16 +1243,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_5y"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
@@ -1273,16 +1294,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
+                        android:orientation="vertical"
                         android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
-                        android:orientation="vertical">
+                        android:paddingRight="40dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-
                             android:maxLines="2"
+
+                            android:minHeight="40dp"
                             android:text="@string/home_stopsmoking_10y"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
