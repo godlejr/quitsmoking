@@ -119,6 +119,17 @@ public class UserWritePresenterImpl<V extends UserWriteView> extends BasePresent
         String countStr = getBaseView().getmCountEtContent();
         String priceStr = getBaseView().getmPriceEtContent();
 
+        if(countStr.equals("")){
+            countStr = "0";
+            getBaseView().setmCountEtContent("0");
+        }
+
+        if(priceStr.equals("")){
+            priceStr = "0";
+            getBaseView().setmPriceEtContent("0");
+
+        }
+
         int meanOfSmoking = Integer.parseInt(countStr);
         int costOfSmoking = Integer.parseInt(priceStr);
 

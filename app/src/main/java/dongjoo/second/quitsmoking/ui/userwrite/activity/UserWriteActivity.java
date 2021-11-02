@@ -35,14 +35,14 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
     private DatePickerDialog.OnDateSetListener onDateSetListener = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mPresenter.onDateSet(year, monthOfYear+1, dayOfMonth);
+            mPresenter.onDateSet(year, monthOfYear + 1, dayOfMonth);
         }
     };
 
     private TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-            mPresenter.onTimeSet(hourOfDay,minute);
+            mPresenter.onTimeSet(hourOfDay, minute);
         }
     };
 
@@ -106,13 +106,13 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
     }
 
     @Override
-    public void setDatePickerDialog(int year, int month, int day){
+    public void setDatePickerDialog(int year, int month, int day) {
         datePickerDialog = new DatePickerDialog(this, R.style.MySpinnerDateTimePickerStyle, onDateSetListener, year, month, day);
     }
 
     @Override
-    public void setTimePickerDialog(int hour, int minute, boolean is24){
-        timePickerDialog = new TimePickerDialog(this,  R.style.MySpinnerDateTimePickerStyle, onTimeSetListener, hour, minute, is24);
+    public void setTimePickerDialog(int hour, int minute, boolean is24) {
+        timePickerDialog = new TimePickerDialog(this, R.style.MySpinnerDateTimePickerStyle, onTimeSetListener, hour, minute, is24);
     }
 
     @Override
@@ -120,6 +120,7 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
         this.mIncludedToolbarLayout = new IncludedToolbarLayout();
         ButterKnife.bind(mIncludedToolbarLayout, mToolbar);
     }
+
 
     @Override
     public void showToolbarTitle(String message) {
