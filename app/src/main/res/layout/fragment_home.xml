@@ -55,7 +55,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
-                        android:text="나의 금연 상태"
+                        android:text="@string/home_my_stopsmoking_state"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -83,7 +83,7 @@
                         android:gravity="center"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:text="금연상태 작성하기"
+                        android:text="@string/home_no_user"
                         android:textColor="@color/pointColor"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -109,7 +109,7 @@
                             android:layout_height="25dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="금연 시작 날짜"
+                            android:text="@string/home_stopsmoking_startdate"
 
                             android:textColor="@color/gray"
                             android:textSize="14sp"
@@ -140,7 +140,7 @@
                             android:layout_height="25dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="금연 기간"
+                            android:text="@string/home_stopsmoking_period"
                             android:textColor="@color/gray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -170,7 +170,7 @@
                             android:layout_height="25dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="연장된 수명"
+                            android:text="@string/home_life_extension"
                             android:textColor="@color/gray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -201,7 +201,7 @@
                             android:layout_height="25dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="아낀 돈"
+                            android:text="@string/home_save_money"
                             android:textColor="@color/gray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -240,7 +240,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
-                        android:text="나의 건강 상태"
+                        android:text="@string/home_my_heath_state"
                         android:textColor="@color/defaultTextColor"
                         android:layout_alignParentLeft="true"
                         android:textSize="20sp"
@@ -278,7 +278,7 @@
                             android:layout_height="30dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="Level 1. 지옥의 3일을 버텨라"
+                            android:text="@string/home_custom_level1"
                             android:textColor="@color/pointColor"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -298,7 +298,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 20분 - 혈압 맥박 손발 체온 정상"
+                            android:text="@string/home_stopsmoking_20m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -348,7 +348,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 8시간 - 혈액 일산화탄소 감소 및 산소 증가"
+                            android:text="@string/home_stopsmoking_8h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -398,7 +398,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 24시간 - 심장마비 위험 감소"
+                            android:text="@string/home_stopsmoking_24h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -448,7 +448,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 48시간 - 니코틴 부족 적응 및 후각 미각 상승"
+                            android:text="@string/home_stopsmoking_48h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -498,7 +498,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 72시간 - 기관지 이완 및 폐활량 증가"
+                            android:text="@string/home_stopsmoking_72h"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -548,7 +548,7 @@
                             android:layout_height="30dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="Level 2. 한 번의 욕구를 참아라"
+                            android:text="@string/home_custom_level2"
                             android:textColor="@color/pointColor"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -568,7 +568,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 1주 - 기침 가래 입냄새가 적어짐"
+                            android:text="@string/home_stopsmoking_1w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -619,7 +619,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 2주 - 혈액순환 좋아짐"
+                            android:text="@string/home_stopsmoking_2w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -669,7 +669,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 3주 - 기침과 숨 가쁨이 적어짐"
+                            android:text="@string/home_stopsmoking_3w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -719,7 +719,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 4주 - 혈액순환이 지속적으로 개선됨"
+                            android:text="@string/home_stopsmoking_4w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -771,7 +771,7 @@
                             android:layout_height="30dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="Level 3. 건강을 회복하라"
+                            android:text="@string/home_custom_level3"
                             android:textColor="@color/pointColor"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -791,7 +791,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 6주 - 폐기능의 향상을 느낌"
+                            android:text="@string/home_stopsmoking_6w"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -841,7 +841,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 2개월 - 유산소 운동이 쉬워짐"
+                            android:text="@string/home_stopsmoking_2m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -891,7 +891,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 2.5개월 - 폐기능 향상 및 욕구 절제력 증가"
+                            android:text="@string/home_stopsmoking_2_5m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -941,7 +941,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 3개월 - 폐기능 30% 향상"
+                            android:text="@string/home_stopsmoking_3m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -991,7 +991,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 4.5개월 - 폐기능 50% 향상 및 기력 회복력 증가"
+                            android:text="@string/home_stopsmoking_4_5m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -1043,7 +1043,7 @@
                             android:layout_height="30dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="Level 4. 방심은 금물이다"
+                            android:text="@string/home_custom_level4"
                             android:textColor="@color/pointColor"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -1063,7 +1063,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 6개월 - 폐기능 70% 향상"
+                            android:text="@string/home_stopsmoking_6m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -1113,7 +1113,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 9개월 - 폐 섬모 재생 및 폐 정상화 진행"
+                            android:text="@string/home_stopsmoking_9m"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -1163,7 +1163,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 1년 - 심장마비 위험 흡연자 비해 절반"
+                            android:text="@string/home_stopsmoking_1y"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -1213,7 +1213,7 @@
                             android:layout_height="30dp"
                             android:gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="Level 5. 금연의 끝은 없다"
+                            android:text="@string/home_custom_level5"
                             android:textColor="@color/pointColor"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -1233,7 +1233,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 5년 - 심장마비 위험 비흡연자와 거의 동일"
+                            android:text="@string/home_stopsmoking_5y"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -1283,7 +1283,7 @@
                             android:gravity="center_vertical"
 
                             android:maxLines="2"
-                            android:text="금연 10년 - 폐암 위험이 흡연자의 절반"
+                            android:text="@string/home_stopsmoking_10y"
                             android:textColor="@color/darkGray"
                             android:textSize="14sp"
                             android:textStyle="bold" />

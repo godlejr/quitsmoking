@@ -53,6 +53,16 @@ public class SettingFragment extends BaseFragment implements SettingFragmentView
     @BindView(R.id.adView)
     AdView mAdView;
 
+    @BindString(R.string.url_playstore)
+    String playstoreUrl;
+
+    @BindString(R.string.url_blog_promotion)
+    String blogPromotionUrl;
+
+    @BindString(R.string.app_name)
+    String appName;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,23 +105,23 @@ public class SettingFragment extends BaseFragment implements SettingFragmentView
 
 
     @OnClick(R.id.ll_setting_userwrite)
-    public void onClickUserWrite(){
+    public void onClickUserWrite() {
         this.mPresenter.onClickUserWrite();
     }
 
     @OnClick(R.id.ll_setting_mail)
-    public void onClickMail(){
+    public void onClickMail() {
         this.mPresenter.onClickMail();
     }
 
 
     @OnClick(R.id.ll_setting_promotion)
-    public void onClickPromotion(){
+    public void onClickPromotion() {
         this.mPresenter.onClickPromotion();
     }
 
     @OnClick(R.id.ll_setting_comment)
-    public void onClickComment(){
+    public void onClickComment() {
         this.mPresenter.onClickComment();
     }
 
@@ -123,7 +133,7 @@ public class SettingFragment extends BaseFragment implements SettingFragmentView
 
     @Override
     public void navigateToGoogleAppStore() {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=dongjoo.second.quitsmoking"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(playstoreUrl));
         startActivity(intent);
     }
 
@@ -131,19 +141,19 @@ public class SettingFragment extends BaseFragment implements SettingFragmentView
     public void navigateToShareApp() {
         Intent intent = new Intent(android.content.Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT, "https://dongjoo-kim.tistory.com/61");
+        intent.putExtra(Intent.EXTRA_TEXT, blogPromotionUrl);
 
-        Intent chooser = Intent.createChooser(intent, "초간단 금연일기 공유하기");
+        Intent chooser = Intent.createChooser(intent, appName);
         startActivity(chooser);
     }
 
     @Override
-    public void navigateToDevEmail(){
+    public void navigateToDevEmail() {
         Intent email = new Intent(Intent.ACTION_SEND);
         email.setType("plain/text");
         String[] address = {devEmail};
         email.putExtra(Intent.EXTRA_EMAIL, address);
-        email.putExtra(Intent.EXTRA_SUBJECT, "[초간단 금연일기 앱 문의]");
+        email.putExtra(Intent.EXTRA_SUBJECT, "[" + appName + "]");
         email.putExtra(Intent.EXTRA_TEXT, "");
         startActivity(email);
     }

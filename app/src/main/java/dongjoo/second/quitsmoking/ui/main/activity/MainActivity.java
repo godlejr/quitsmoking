@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import dongjoo.second.quitsmoking.R;
@@ -40,6 +41,7 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
 
     private MainTabAdapter mTabAdapter;
 
+
     @BindView(R.id.tl_mainactivity)
     TabLayout mTabLayout;
 
@@ -48,6 +50,19 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
 
     @BindView(R.id.in_mainactivity_toolbar)
     View mToolbar;
+
+
+    @BindString(R.string.tab_title1)
+    String tabTitle1;
+
+    @BindString(R.string.tab_title2)
+    String tabTitle2;
+
+    @BindString(R.string.tab_title3)
+    String tabTitle3;
+
+    @BindString(R.string.title_main)
+    String mainTitle;
 
 
     @Override
@@ -109,9 +124,9 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
         ButterKnife.bind(mInflatedTabLayout_3, tab_3);
 
 
-        mInflatedTabLayout_1.mTabTitle.setText("홈");
-        mInflatedTabLayout_2.mTabTitle.setText("일기");
-        mInflatedTabLayout_3.mTabTitle.setText("설정");
+        mInflatedTabLayout_1.mTabTitle.setText(tabTitle1);
+        mInflatedTabLayout_2.mTabTitle.setText(tabTitle2);
+        mInflatedTabLayout_3.mTabTitle.setText(tabTitle3);
 
 
         mTabLayout.addTab(mTabLayout.newTab());
@@ -151,6 +166,11 @@ public class MainActivity extends BaseActivity implements MainView, TabLayout.On
 //                break;
 //        }
 
+    }
+
+    @Override
+    public String getMainTitle() {
+        return mainTitle;
     }
 
     @Override

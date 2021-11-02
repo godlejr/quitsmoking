@@ -248,4 +248,14 @@ public interface HomeFragmentView extends BaseView {
     void setmTv19_6mTextWithPointColor();
 
     void navigateToUserWriteActivity();
+
+    String getCustomLevel1();
+
+    String getCustomLevel2();
+
+    String getCustomLevel3();
+
+    String getCustomLevel4();
+
+    String getCustomLevel5();
 }

@@ -18,6 +18,10 @@ public interface BaseView {
 
     void showMessage(String message);
 
+    String getAppDestroyConfirm();
+
+    String getHistoryDeleteConfirm();
+
     void setToolbarLayout();
 
     void setActivityFinish();
@@ -42,6 +46,28 @@ public interface BaseView {
 
     ArrayList<History> getSharedPreferHistories();
 
+
+    String getWordFixDays();
+
+    String getWordFixHours();
+
+    String getWordFixMinutes();
+
+    String getWordFixPassed();
+
+    String getWordFixCurrency();
+
+    String getWordFixExtension();
+
+    String getActionWrite();
+
+    String getActionWriteComplete();
+
+    String getWordFixStopsmoking();
+
+    String getWordFixDateCount();
+
+    String getQuitSmokingStatement();
 
     Context getContext();
 

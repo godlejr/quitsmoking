@@ -19,7 +19,7 @@ public class UserWritePresenterImpl<V extends UserWriteView> extends BasePresent
 
         getBaseView().setToolbarLayout();
 
-        getBaseView().showToolbarTitle("나의 금연 상태 작성");
+        getBaseView().showToolbarTitle(getBaseView().getUserWriteTitle());
         getBaseView().showProgressDialog();
 
 
@@ -157,7 +157,7 @@ public class UserWritePresenterImpl<V extends UserWriteView> extends BasePresent
             getBaseView().setSharedPreferUser(newUser);
         }
 
-        getBaseView().showMessage("작성 완료");
+        getBaseView().showMessage(getBaseView().getActionWriteComplete());
         getBaseView().onBackBtnClick();
     }
 

@@ -18,6 +18,7 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import butterknife.BindColor;
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -63,6 +64,12 @@ public class HistoryWriteActivity extends BaseActivity implements HistoryWriteVi
     @BindView(R.id.adView)
     AdView mAdView;
 
+
+
+    @BindString(R.string.title_history_write)
+    String HistoryWriteTitle;
+
+
     private IncludedToolbarLayout mIncludedToolbarLayout;
 
 
@@ -87,6 +94,10 @@ public class HistoryWriteActivity extends BaseActivity implements HistoryWriteVi
         this.mAdView.loadAd(adRequest);
     }
 
+    @Override
+    public String getHistoryWriteTitle() {
+        return HistoryWriteTitle;
+    }
 
     @Override
     protected void init() {

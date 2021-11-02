@@ -14,26 +14,11 @@ public class DialogFlag {
 
 
     /**
-     * Confirm Dialog title
-     * <p>
-     * 다이어로그 제목
-     */
-    public static final String HISTORY_DELETE_CONFIRM_TITLE = "삭제 하시겠습니까?";
-
-    public static final String APP_DESTROY_CONFIRM_TITLE = "종료 하시겠습니까?";
-
-    /**
      * Search List Dialog
      * <p>
      * 액티비티 결과 코드
      */
 
-
-    /**
-     * Search List Dialog title
-     * <p>
-     * 다이어로그 제목
-     */
 
 
     /**

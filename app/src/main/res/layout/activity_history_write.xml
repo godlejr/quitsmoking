@@ -66,7 +66,7 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="left|center_vertical"
                         android:paddingRight="0dp"
-                        android:text="오늘 금연 성공했나요?"
+                        android:text="@string/history_write_question1"
                         android:textColor="@color/darkGray" />
 
                     <RadioGroup
@@ -153,7 +153,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
-                    android:hint="하루의 일기를 써보세요"
+                    android:hint="@string/history_write_hint"
                     android:gravity="left"
                     android:inputType="textMultiLine"
                     android:scrollHorizontally="false"
@@ -188,7 +188,7 @@
         android:layout_gravity="bottom"
         android:background="@color/darkGray"
         android:gravity="center"
-        android:text="완료"
+        android:text="@string/action_complete"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />

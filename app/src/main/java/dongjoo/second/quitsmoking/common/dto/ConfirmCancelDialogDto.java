@@ -8,7 +8,7 @@ import dongjoo.second.quitsmoking.common.entity.User;
 
 public class ConfirmCancelDialogDto implements Serializable {
 
-    private List<History> histories; //전표 / 카드사용내역 용도
+    private List<History> histories;
     private User user;
 
     public ConfirmCancelDialogDto() {

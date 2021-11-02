@@ -19,6 +19,7 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import butterknife.BindColor;
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -185,6 +186,22 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
 
     @BindView(R.id.adView)
     AdView mAdView;
+
+    @BindString(R.string.custom_level1)
+    String customLevel1;
+
+    @BindString(R.string.custom_level2)
+    String customLevel2;
+
+    @BindString(R.string.custom_level3)
+    String customLevel3;
+
+    @BindString(R.string.custom_level4)
+    String customLevel4;
+
+    @BindString(R.string.custom_level5)
+    String customLevel5;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -890,6 +907,30 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
         startActivity(intent);
     }
 
+    @Override
+    public String getCustomLevel1() {
+        return customLevel1;
+    }
+
+    @Override
+    public String getCustomLevel2() {
+        return customLevel2;
+    }
+
+    @Override
+    public String getCustomLevel3() {
+        return customLevel3;
+    }
+
+    @Override
+    public String getCustomLevel4() {
+        return customLevel4;
+    }
+
+    @Override
+    public String getCustomLevel5() {
+        return customLevel5;
+    }
 
     @Override
     public void onResume() {

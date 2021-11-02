@@ -54,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical"
-                        android:text="금연상태 작성하기"
+                        android:text="@string/setting_user_write"
                         android:textColor="@color/defaultTextColor"
                         android:textSize="17sp" />
 
@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical"
-                        android:text="금연 홍보하기"
+                        android:text="@string/setting_promotion"
                         android:textColor="@color/defaultTextColor"
                         android:textSize="17sp" />
 
@@ -133,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical"
-                        android:text="문의 메일 보내기"
+                        android:text="@string/setting_email"
                         android:textColor="@color/defaultTextColor"
                         android:textSize="17sp" />
 
@@ -171,7 +171,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical"
-                        android:text="초간단 금연일기 오구오구 해주기"
+                        android:text="@string/setting_comment"
                         android:textColor="@color/defaultTextColor"
                         android:textSize="17sp" />
 

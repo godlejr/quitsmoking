@@ -12,7 +12,9 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
+import butterknife.BindString;
 import dongjoo.second.quitsmoking.R;
 import dongjoo.second.quitsmoking.common.entity.History;
 import dongjoo.second.quitsmoking.common.entity.User;
@@ -38,6 +40,77 @@ public abstract class BaseFragment extends Fragment implements BaseView {
 
     protected Handler mProgressDialogHandler;
 
+
+    @BindString(R.string.app_destroy_confirm)
+    String appDestroyConfirm;
+
+    @BindString(R.string.history_delete_confirm)
+    String historyDeleteConfirm;
+
+    @BindString(R.string.quitSmokingStatements1)
+    String quitSmokingStatements1;
+
+    @BindString(R.string.quitSmokingStatements2)
+    String quitSmokingStatements2;
+
+    @BindString(R.string.quitSmokingStatements3)
+    String quitSmokingStatements3;
+
+    @BindString(R.string.quitSmokingStatements4)
+    String quitSmokingStatements4;
+
+    @BindString(R.string.quitSmokingStatements5)
+    String quitSmokingStatements5;
+
+    @BindString(R.string.quitSmokingStatements6)
+    String quitSmokingStatements6;
+
+    @BindString(R.string.quitSmokingStatements7)
+    String quitSmokingStatements7;
+
+
+    @BindString(R.string.quitSmokingStatements8)
+    String quitSmokingStatements8;
+
+    @BindString(R.string.quitSmokingStatements9)
+    String quitSmokingStatements9;
+
+    @BindString(R.string.quitSmokingStatements10)
+    String quitSmokingStatements10;
+
+    @BindString(R.string.quitSmokingStatements11)
+    String quitSmokingStatements11;
+
+    @BindString(R.string.action_write)
+    String actionWrite;
+
+    @BindString(R.string.action_write_complete)
+    String actionWriteComplete;
+
+    @BindString(R.string.word_fix_stopsmoking)
+    String wordFixStopsmoking;
+
+    @BindString(R.string.word_fix_date_count)
+    String wordFixDateCount;
+
+    @BindString(R.string.word_fix_days)
+    String wordFixDays;
+
+    @BindString(R.string.word_fix_hours)
+    String wordFixHours;
+
+    @BindString(R.string.word_fix_minutes)
+    String wordFixMinutes;
+
+    @BindString(R.string.word_fix_passed)
+    String wordFixPassed;
+
+    @BindString(R.string.word_fix_currency)
+    String wordFixCurrency;
+
+
+    @BindString(R.string.word_fix_extension)
+    String wordFixExtension;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,6 +190,16 @@ public abstract class BaseFragment extends Fragment implements BaseView {
     }
 
     @Override
+    public String getAppDestroyConfirm() {
+        return appDestroyConfirm;
+    }
+
+    @Override
+    public String getHistoryDeleteConfirm() {
+        return historyDeleteConfirm;
+    }
+
+    @Override
     public void showProgressDialog() {
         this.mProgressDialog.show();
         if (this.mProgressDialog.getWindow() != null) {
@@ -138,6 +221,71 @@ public abstract class BaseFragment extends Fragment implements BaseView {
             }
         }, 400);
 
+    }
+
+    @Override
+    public String getActionWrite() {
+        return actionWrite;
+    }
+    @Override
+    public String getActionWriteComplete() {
+        return actionWriteComplete;
+    }
+
+    @Override
+    public String getWordFixStopsmoking() {
+        return wordFixStopsmoking;
+    }
+    @Override
+    public String getWordFixDateCount() {
+        return wordFixDateCount;
+    }
+
+
+    @Override
+    public String getWordFixDays() {
+        return wordFixDays;
+    }
+
+    @Override
+    public String getWordFixHours() {
+        return wordFixHours;
+    }
+
+    @Override
+    public String getWordFixMinutes() {
+        return wordFixMinutes;
+    }
+
+    @Override
+    public String getWordFixPassed() {
+        return wordFixPassed;
+    }
+
+    @Override
+    public String getWordFixCurrency() {
+        return wordFixCurrency;
+    }
+
+    @Override
+    public String getQuitSmokingStatement() {
+
+        String[] quitSmokingStatements = {
+                quitSmokingStatements1, quitSmokingStatements2, quitSmokingStatements3,
+                quitSmokingStatements4, quitSmokingStatements5, quitSmokingStatements6,
+                quitSmokingStatements7, quitSmokingStatements8, quitSmokingStatements9,
+                quitSmokingStatements10, quitSmokingStatements11
+        };
+        Random rd = new Random();
+        String stmt = quitSmokingStatements[rd.nextInt(11)];
+
+        return stmt;
+
+    }
+
+    @Override
+    public String getWordFixExtension() {
+        return wordFixExtension;
     }
 
     protected abstract void init();

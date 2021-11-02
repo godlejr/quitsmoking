@@ -13,7 +13,6 @@ import dongjoo.second.quitsmoking.ui.home.view.HomeFragmentView;
 
 public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BasePresenterImpl<V> implements HomeFragmentPresenter<V> {
 
-//    private HomeFragmentInteractor mInteractor;
 
     public HomeFragmentPresenterImpl() {
     }
@@ -21,15 +20,13 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
 
     @Override
     public void init() {
-//        this.mInteractor = new HomeFragmentInteractorImpl<HomeFragmentPresenter>();
-//        this.mInteractor.onAttach(this);
     }
 
     @Override
     public void initView() {
 
         //명언 투척
-        getBaseView().setmNoticeTvContent(StringUtil.getQuitSmokingStatement());
+        getBaseView().setmNoticeTvContent(getBaseView().getQuitSmokingStatement());
 
         User user = getBaseView().getSharedPreferUser();
 
@@ -50,7 +47,7 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             meanOfSmoking = user.getMeanOfSmoking();
             costOfSmoking = user.getCostOfSmoking();
 
-            String startdaysVal = year + "년 " + month + "월 " + day + "일";
+            String startdaysVal = year + "-" + month + "-" + day;
 
             //금연일자
             getBaseView().setmStartdaysValContent(startdaysVal);
@@ -84,10 +81,17 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             long diffHoursMod = (diffSec / (60 * 60)) % 24; //시간 차이
             long diffMinutesMod = (diffSec / (60)) % 60; //분 차이
 
-            String quitPeriodVal = diffHoursMod + "시간 " + diffMinutesMod + "분 째";
+            String daysStr = getBaseView().getWordFixDays();
+            String minutesStr = getBaseView().getWordFixMinutes();
+            String hoursStr = getBaseView().getWordFixHours();
+            String passedStr = getBaseView().getWordFixPassed();
+            String extensionStr = getBaseView().getWordFixExtension();
+
+
+            String quitPeriodVal = diffHoursMod + hoursStr + " " + diffMinutesMod + minutesStr + " " + passedStr;
 
             if (diffDays > 0 || diffDays < 0) {
-                quitPeriodVal = diffDays + "일 " + diffHoursMod + "시간 " + diffMinutesMod + "분 째";
+                quitPeriodVal = diffDays + daysStr + " " + diffHoursMod + hoursStr + " " + diffMinutesMod + minutesStr + " " + passedStr;
             }
 
             getBaseView().setmQuitperiodValContent(quitPeriodVal);
@@ -103,10 +107,10 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             long lifeHoursMod = (lifeSec / (60 * 60)) % 24; //시간 차이
             long lifeMinutesMod = (lifeSec / (60)) % 60; //분 차이
 
-            String lifeVal = lifeHoursMod + "시간 " + lifeMinutesMod + "분 연장";
+            String lifeVal = lifeHoursMod + hoursStr + " " + lifeMinutesMod + minutesStr + " " + extensionStr;
 
             if (lifeDays > 0 || lifeDays < 0) {
-                lifeVal = lifeDays + "일 " + lifeHoursMod + "시간 " + lifeMinutesMod + "분 연장";
+                lifeVal = lifeDays + daysStr + " " + +lifeHoursMod + hoursStr + " " + lifeMinutesMod + minutesStr + " " + extensionStr;
             }
 
             getBaseView().setmLifeValContent(lifeVal);
@@ -119,7 +123,7 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 money *= diffDays;
             }
 
-            String moneyVal = StringUtil.getWonMoneyFormatByPriceAndCurrCd(money, "KRW") + "원";
+            String moneyVal = StringUtil.getWonMoneyFormatByPriceAndCurrCd(money, "KRW") + getBaseView().getWordFixCurrency();
             getBaseView().setmMoneyValContent(moneyVal);
 
 
@@ -188,8 +192,6 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             }
 
 
-
-
             //1주
             double per5_1 = (((double) diffMinutes / (7 * 24 * 60)) * 100);
             if (per5_1 < 100) {
@@ -201,7 +203,6 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 getBaseView().setmTv12_1wContent(100 + "%");
                 getBaseView().setmPg12_1wContent(100, isAnim);
             }
-
 
 
             double per6 = (((double) diffMinutes / (14 * 24 * 60)) * 100);
@@ -278,7 +279,6 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             }
 
 
-
             double per7 = (((double) diffMinutes / (90 * 24 * 60)) * 100);
             if (per7 < 100) {
                 getBaseView().setmTv7_3moTextWithDarkGrayColor();
@@ -304,8 +304,6 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             }
 
 
-
-
             // 6m
             double per7_2 = (((double) diffMinutes / (180 * 24 * 60)) * 100);
             if (per7_2 < 100) {
@@ -317,7 +315,6 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
                 getBaseView().setmTv19_6mContent(100 + "%");
                 getBaseView().setmPg19_6mContent(100, isAnim);
             }
-
 
 
             double per8 = (((double) diffMinutes / (270 * 24 * 60)) * 100);
@@ -366,16 +363,16 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             }
 
             String myLevel = "Lv.1 지옥의 3일";
-            if (per5<100){
-                myLevel = "Lv.1 지옥의 3일";
-            }else if(per6_2 <100){
-                myLevel = "Lv.2 욕구의 인내";
-            }else if(per7_1 <100){
-                myLevel = "Lv.3 건강의 회복";
-            }else if(per9 < 100){
-                myLevel = "Lv.4 방심 금지령";
-            }else{
-                myLevel ="Lv.5 금연 끝판왕";
+            if (per5 < 100) {
+                myLevel = getBaseView().getCustomLevel1();
+            } else if (per6_2 < 100) {
+                myLevel = getBaseView().getCustomLevel2();
+            } else if (per7_1 < 100) {
+                myLevel = getBaseView().getCustomLevel3();
+            } else if (per9 < 100) {
+                myLevel = getBaseView().getCustomLevel4();
+            } else {
+                myLevel = getBaseView().getCustomLevel5();
             }
 
             getBaseView().setmMyLevelTvContent(myLevel);
@@ -385,8 +382,6 @@ public class HomeFragmentPresenterImpl<V extends HomeFragmentView> extends BaseP
             getBaseView().showUserEmptyContent();
 
         }
-
-
 
 
     }

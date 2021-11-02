@@ -18,6 +18,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -69,6 +70,9 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
 
     @BindView(R.id.adView)
     AdView mAdView;
+
+    @BindString(R.string.title_user_write)
+    String userWriteTitle;
 
     private IncludedToolbarLayout mIncludedToolbarLayout;
 
@@ -122,6 +126,10 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
         this.mIncludedToolbarLayout.mToolbarTitle.setText(message);
     }
 
+    @Override
+    public String getUserWriteTitle() {
+        return userWriteTitle;
+    }
 
     @OnClick(R.id.tv_userwrite_date)
     public void onClickDate() {

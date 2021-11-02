@@ -11,6 +11,8 @@ public interface MainView extends BaseView {
 
     void setTabAdapter();
 
+    String getMainTitle();
+
     void destroyApp();
 
     void navigateToConfirmCancelDialogActivity(ConfirmCancelDialogDto confirmCancelDialogDto, int flag, int requestCode);

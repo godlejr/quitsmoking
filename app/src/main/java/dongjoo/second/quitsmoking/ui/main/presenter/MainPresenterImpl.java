@@ -31,7 +31,7 @@ public class MainPresenterImpl<V extends MainView> extends BasePresenterImpl<V> 
     private void showTitle() {
         User user = getBaseView().getSharedPreferUser();
 
-        String title = "초간단 금연일기";
+        String title = getBaseView().getMainTitle();
 
         if (user != null) {
             String startDays = user.getStartDays();
@@ -55,7 +55,7 @@ public class MainPresenterImpl<V extends MainView> extends BasePresenterImpl<V> 
             long diffDays = diffSec / (24 * 60 * 60); //일자수 차이
             long diffHours = diffSec / (60 * 60); //시간 차이
 
-            title = "금연 " + (diffDays+1) + "일차";
+            title = getBaseView().getWordFixStopsmoking() + " " + (diffDays + 1) + getBaseView().getWordFixDateCount();
         }
 
         getBaseView().showToolbarTitle(title);

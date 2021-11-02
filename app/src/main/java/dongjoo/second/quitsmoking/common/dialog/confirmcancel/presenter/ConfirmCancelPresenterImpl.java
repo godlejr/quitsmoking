@@ -24,11 +24,11 @@ public class ConfirmCancelPresenterImpl<V extends ConfirmCancelView> extends Bas
         this.flag = flag;
 
         if (this.flag == DialogFlag.HISTORY_DELETE_CONFIRM) {
-            getBaseView().setTitleContent(DialogFlag.HISTORY_DELETE_CONFIRM_TITLE);
+            getBaseView().setTitleContent(getBaseView().getHistoryDeleteConfirm());
         }
 
         if (this.flag == DialogFlag.APP_DESTROY_CONFIRM) {
-            getBaseView().setTitleContent(DialogFlag.APP_DESTROY_CONFIRM_TITLE);
+            getBaseView().setTitleContent(getBaseView().getAppDestroyConfirm());
         }
 
         getBaseView().goneProgressDialog();

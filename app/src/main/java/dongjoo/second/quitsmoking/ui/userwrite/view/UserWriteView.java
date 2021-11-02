@@ -9,6 +9,8 @@ public interface UserWriteView extends BaseView {
 
     void setTimePickerDialog(int hour, int minute, boolean is24);
 
+    String getUserWriteTitle();
+
     void setmDateTvContent(String content);
 
     void setmTimeTvContent(String content);

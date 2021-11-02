@@ -38,7 +38,7 @@
                         android:layout_height="45dp"
                         android:layout_alignParentLeft="true"
                         android:gravity="center_vertical|left"
-                        android:text="3111일차 (2021.01.11)"
+                        android:text=""
                         android:textColor="@color/defaultTextColor"
                         android:textSize="16sp"
 
