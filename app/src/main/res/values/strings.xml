@@ -129,18 +129,34 @@
     <string name="url_playstore" translatable="false">https://play.google.com/store/apps/details?id=dongjoo.second.quitsmoking</string>
     <string name="url_blog_promotion" translatable="false">https://dongjoo-kim.tistory.com/61</string>
 
-    <!--ad mob-->
-    <string name="ad_app_id">ca-app-pub-9788689455127875~1070463615</string>
+    <!--ad mob dev-->
+<!--    <string name="ad_app_id" translatable="false">ca-app-pub-5871533778352436~1368349653</string>-->
 
-    <string name="ad_banner_dev">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ad_banner_prod_1">ca-app-pub-9788689455127875/6477675295</string>
-    <string name="ad_banner_prod_2">ca-app-pub-9788689455127875/3085225195</string>
-    <string name="ad_banner_prod_3">ca-app-pub-9788689455127875/5836662991</string>
-    <string name="ad_banner_prod_4">ca-app-pub-9788689455127875/9584336311</string>
-    <string name="ad_banner_prod_5">ca-app-pub-9788689455127875/1081840390</string>
-    <string name="ad_banner_prod_6">ca-app-pub-9788689455127875/3353969883</string>
+<!--    <string name="ad_banner_dev" translatable="false">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="ad_banner_prod_1" translatable="false">ca-app-pub-3940256099942544/630097811</string>-->
+<!--    <string name="ad_banner_prod_2" translatable="false">ca-app-pub-3940256099942544/630097811</string>-->
+<!--    <string name="ad_banner_prod_3" translatable="false">ca-app-pub-3940256099942544/630097811</string>-->
+<!--    <string name="ad_banner_prod_4" translatable="false">ca-app-pub-3940256099942544/630097811</string>-->
+<!--    <string name="ad_banner_prod_5" translatable="false">ca-app-pub-3940256099942544/630097811</string>-->
+<!--    <string name="ad_banner_prod_6" translatable="false">ca-app-pub-3940256099942544/630097811</string>-->
 
-    <string name="ad_front_dev">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="ad_front_prod_1">ca-app-pub-9788689455127875/8992157996</string>
+<!--    <string name="ad_front_dev" translatable="false">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    <string name="ad_front_prod_1" translatable="false">ca-app-pub-3940256099942544/1033173712</string>-->
+
+    <!--ad mob prod-->
+
+    <string name="ad_app_id" translatable="false">ca-app-pub-5871533778352436~1368349653</string>
+
+    <string name="ad_banner_dev" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_banner_prod_1" translatable="false">ca-app-pub-5871533778352436/2845082855</string>
+    <string name="ad_banner_prod_2" translatable="false">ca-app-pub-5871533778352436/6401184480</string>
+    <string name="ad_banner_prod_3" translatable="false">ca-app-pub-5871533778352436/1685056186</string>
+    <string name="ad_banner_prod_4" translatable="false">ca-app-pub-5871533778352436/7522694463</string>
+    <string name="ad_banner_prod_5" translatable="false">ca-app-pub-5871533778352436/2270367780</string>
+    <string name="ad_banner_prod_6" translatable="false">ca-app-pub-5871533778352436/7331122773</string>
+
+    <string name="ad_front_dev" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ad_front_prod_1" translatable="false">ca-app-pub-5871533778352436/6362667794</string>
+
 
 </resources>

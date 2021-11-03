@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">super simple non-smoking diary</string>
-    <string name="ad_app_id">ca-app-pub-9788689455127875~1070463615</string>
-    <string name="ad_banner_dev">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ad_banner_prod_1">ca-app-pub-9788689455127875/6477675295</string>
-    <string name="ad_banner_prod_2">ca-app-pub-9788689455127875/3085225195</string>
-    <string name="ad_banner_prod_3">ca-app-pub-9788689455127875/5836662991</string>
-    <string name="ad_banner_prod_4">ca-app-pub-9788689455127875/9584336311</string>
-    <string name="ad_banner_prod_5">ca-app-pub-9788689455127875/1081840390</string>
-    <string name="ad_banner_prod_6">ca-app-pub-9788689455127875/3353969883</string>
-    <string name="ad_front_dev">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="ad_front_prod_1">ca-app-pub-9788689455127875/8992157996</string>
     <string name="quitSmokingStatements1">Tobacco, that\'s poison</string>
     <string name="quitSmokingStatements2">Never smoke</string>
     <string name="quitSmokingStatements3">Smoking is a cause of stress</string>
@@ -39,9 +29,9 @@
     <string name="home_stopsmoking_8h">8 hours - reducing blood carbon monoxide and increasing oxygen</string>
     <string name="home_stopsmoking_20m">20 minutes - blood pressure pulse limbs body temperature normal</string>
     <string name="home_stopsmoking_24h">24 hours - Reduces Heart Attack Risk</string>
-    <string name="home_stopsmoking_72h">76 hours - bronchial relaxation and increased lung capacity</string>
+    <string name="home_stopsmoking_72h">72 hours - bronchial relaxation and increased lung capacity</string>
     <string name="home_stopsmoking_48h">48 hours - Adaptation to nicotine deficiency and increased sense of smell</string>
-    <string name="home_stopsmoking_1w">1 week - cough, sputum, bad breath</string>
+    <string name="home_stopsmoking_1w">1 week - less sputum, less bad breath</string>
     <string name="home_stopsmoking_2w">2 weeks - improved blood circulation</string>
     <string name="home_stopsmoking_3w">3 weeks - less cough and shortness of breath</string>
     <string name="home_stopsmoking_4w">4 weeks - blood circulation continues to improve</string>
