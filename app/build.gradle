@@ -9,8 +9,8 @@ android {
         applicationId "dongjoo.second.quitsmoking"
         minSdk 19
         targetSdk 30
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 7
+        versionName "1.0.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
