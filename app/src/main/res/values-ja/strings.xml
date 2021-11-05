@@ -45,7 +45,7 @@
     <string name="home_stopsmoking_1y">禁煙1年 - 心臓発作リスク喫煙者に比べて半分</string>
     <string name="home_stopsmoking_5y">禁煙5年 - 心臓発作リスク非喫煙者とほぼ同じ</string>
     <string name="home_stopsmoking_10y">禁煙10年 - 肺がんのリスクが喫煙者の半分</string>
-    <string name="history_all_selection">全選択</string>
+    <string name="history_all_selection">すべての選択</string>
     <string name="history_selection_delete">選択削除</string>
     <string name="history_no_items">禁煙日記を書いてください</string>
     <string name="history_write_question1">今日の禁煙は成功しましたか？</string>
@@ -84,4 +84,5 @@
     <string name="tab_title2">日記</string>
     <string name="tab_title1">メイン</string>
     <string name="tab_title3">設定</string>
+    <string name="url_blog_promotion">https://dongjoo-kim.tistory.com/63</string>
 </resources>

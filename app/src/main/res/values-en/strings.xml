@@ -69,8 +69,7 @@
     <string name="word_fix_days">days</string>
     <string name="word_fix_hours">hours</string>
     <string name="word_fix_minutes">mins</string>
-    <string name="word_fix_passed"></string>
-    <string name="word_fix_extension"></string>
+    <string name="word_fix_extension">" "</string>
     <string name="title_history_write">write your diary</string>
     <string name="title_main">non-smoking diary</string>
     <string name="title_user_write">Write a non-smoking status</string>
@@ -83,6 +82,8 @@
     <string name="tab_title1">Home</string>
     <string name="tab_title2">Diary</string>
     <string name="tab_title3">Settings</string>
-    <string name="word_fix_currency"></string>
+    <string name="word_fix_currency">" "</string>
+    <string name="word_fix_passed">" "</string>
+    <string name="url_blog_promotion">https://dongjoo-kim.tistory.com/62</string>
 
 </resources>
