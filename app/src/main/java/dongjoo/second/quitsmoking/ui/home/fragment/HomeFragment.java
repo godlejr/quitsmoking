@@ -12,10 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -231,24 +229,12 @@ public class HomeFragment extends BaseFragment implements HomeFragmentView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
+        initView();
 
         AdRequest adRequest = new AdRequest.Builder().build();
         this.mAdView.loadAd(adRequest);
 
-        this.showProgressDialog();
-        this.mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                initView();
-                goneProgressDialog();
-            }
 
-            @Override
-            public void onAdFailedToLoad(LoadAdError adError) {
-                initView();
-                goneProgressDialog();
-            }
-        });
 
         return view;
     }

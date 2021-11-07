@@ -11,10 +11,8 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -81,8 +79,7 @@ public class HistoryWriteActivity extends BaseActivity implements HistoryWriteVi
         setContentView(R.layout.activity_history_write);
 
         ButterKnife.bind(this);
-        this.mPresenter = new HistoryWritePresenterImpl();
-        this.mPresenter.onAttach(this);
+
 
 
         MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
@@ -94,20 +91,10 @@ public class HistoryWriteActivity extends BaseActivity implements HistoryWriteVi
         AdRequest adRequest = new AdRequest.Builder().build();
         this.mAdView.loadAd(adRequest);
 
-        this.showProgressDialog();
-        this.mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                init();
-                goneProgressDialog();
-            }
+        this.mPresenter = new HistoryWritePresenterImpl();
+        this.mPresenter.onAttach(this);
+        init();
 
-            @Override
-            public void onAdFailedToLoad(LoadAdError adError) {
-                init();
-                goneProgressDialog();
-            }
-        });
     }
 
     @Override
