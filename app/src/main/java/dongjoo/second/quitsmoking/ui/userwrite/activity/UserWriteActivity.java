@@ -12,8 +12,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -86,8 +88,6 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
         this.mPresenter = new UserWritePresenterImpl();
         this.mPresenter.onAttach(this);
 
-        init();
-
 
         MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
             @Override
@@ -97,6 +97,21 @@ public class UserWriteActivity extends BaseActivity implements UserWriteView {
 
         AdRequest adRequest = new AdRequest.Builder().build();
         this.mAdView.loadAd(adRequest);
+
+        this.showProgressDialog();
+        this.mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                init();
+                goneProgressDialog();
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                init();
+                goneProgressDialog();
+            }
+        });
     }
 
 

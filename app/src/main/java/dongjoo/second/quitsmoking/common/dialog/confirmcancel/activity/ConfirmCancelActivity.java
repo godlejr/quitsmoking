@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -55,40 +56,45 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
         getWindow().setLayout(android.view.WindowManager.LayoutParams.WRAP_CONTENT, android.view.WindowManager.LayoutParams.WRAP_CONTENT);
         ButterKnife.bind(this);
 
-        this.mPresenter = new ConfirmCancelPresenterImpl();
-        this.mPresenter.onAttach(this);
-        init();
-
         MobileAds.initialize(this.mContext, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
+
+        mPresenter = new ConfirmCancelPresenterImpl();
+        mPresenter.onAttach(this);
+
         //배너 광고
         AdRequest adRequest_banner = new AdRequest.Builder().build();
         this.mAdView.loadAd(adRequest_banner);
 
+        this.showProgressDialog();
+        this.mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                init();
+                goneProgressDialog();
+            }
 
-    }
-
-    @Override
-    protected void init() {
-        ConfirmCancelDialogDto confirmCancelDialogDto = (ConfirmCancelDialogDto) getIntent().getExtras().getSerializable("confirmCancelDialogDto");
-        int flag = getIntent().getIntExtra("flag", 0);
-
-        this.mPresenter.init(confirmCancelDialogDto, flag);
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                init();
+                goneProgressDialog();
+            }
+        });
 
 
         //전면 광고
         AdRequest adRequest_front = new AdRequest.Builder().build();
 
-        mInterstitialAd.load(this,mAdFrontId, adRequest_front,
+        mInterstitialAd.load(this, mAdFrontId, adRequest_front,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                         mInterstitialAd = interstitialAd;
 
-                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
+                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
                             @Override
                             public void onAdDismissedFullScreenContent() {
                                 mPresenter.onAdDismissedFullScreenContent();
@@ -114,6 +120,20 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
                         mInterstitialAd = null;
                     }
                 });
+
+
+
+
+    }
+
+    @Override
+    protected void init() {
+        ConfirmCancelDialogDto confirmCancelDialogDto = (ConfirmCancelDialogDto) getIntent().getExtras().getSerializable("confirmCancelDialogDto");
+        int flag = getIntent().getIntExtra("flag", 0);
+
+        this.mPresenter.init(confirmCancelDialogDto, flag);
+
+
     }
 
     @Override
@@ -122,12 +142,12 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
     }
 
     @OnClick(R.id.btn_confirmcanceldialog_confirm)
-    public void onClickConfirm(){
+    public void onClickConfirm() {
         this.mPresenter.onClickConfirm();
     }
 
     @OnClick(R.id.btn_confirmcanceldialog_cancel)
-    public void onClickCancel(){
+    public void onClickCancel() {
         this.mPresenter.onClickCancel();
     }
 
@@ -143,7 +163,7 @@ public class ConfirmCancelActivity extends BaseActivity implements ConfirmCancel
     }
 
     @Override
-    public void showAdFront(){
+    public void showAdFront() {
         if (mInterstitialAd != null) {
             mInterstitialAd.show(ConfirmCancelActivity.this);
         } else {
